@@ -1,12 +1,7 @@
-// Package faiss provides bindings to Faiss, a library for vector similarity
-// search and clustering of dense vectors.
-// More detailed documentation can be found at the Faiss wiki:
-// https://github.com/facebookresearch/faiss/wiki.
+//go:generate ./build.sh
 package faiss
 
 /*
-#cgo LDFLAGS: -lfaiss_c
-
 #include <faiss/c_api/Index_c.h>
 #include <faiss/c_api/error_c.h>
 */

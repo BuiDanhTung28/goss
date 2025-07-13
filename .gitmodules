@@ -1,0 +1,3 @@
+[submodule "faiss_source"]
+	path = faiss_source
+	url = https://github.com/facebookresearch/faiss.git

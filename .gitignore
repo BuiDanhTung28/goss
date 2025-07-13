@@ -41,4 +41,8 @@ Thumbs.db
 
 # Temporary files
 tmp/
-temp/ 
+temp/
+
+# Build artifacts from Faiss
+internal/build
+internal/lib 
