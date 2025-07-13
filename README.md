@@ -1,7 +1,7 @@
 
 <img width="400" height="400" alt="Go binding for faiss icon" src="https://github.com/user-attachments/assets/e8865cb8-cfd5-419c-8c35-a81c05f46cad" />
 
-# Go-Faiss: Go bindings for Faiss
+# Goss: New Production-Ready Go Binding for FAISS
 
 Go bindings for [Faiss](https://github.com/facebookresearch/faiss), a library for efficient similarity search and clustering of dense vectors.
 
