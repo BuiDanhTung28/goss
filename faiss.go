@@ -2,7 +2,9 @@
 package faiss
 
 /*
+#include <stdlib.h>
 #include <faiss/c_api/Index_c.h>
+#include <faiss/c_api/index_io_c.h>
 #include <faiss/c_api/error_c.h>
 */
 import "C"
