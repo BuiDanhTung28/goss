@@ -6,7 +6,10 @@ package faiss
 */
 import "C"
 import (
+	"bufio"
+	"encoding/binary"
 	"fmt"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -56,6 +59,39 @@ func ReadIndex(fname string, ioflags int) (Index, error) {
 		return nil, getLastError()
 	}
 	return NewFaissIndex(cIdx), nil
+}
+
+// GetNtotalFromIndexFile reads the number of vectors from a Faiss index file
+// without loading the entire index into memory.
+func GetNtotalFromIndexFile(filename string) (int64, error) {
+	f, err := os.Open(filename)
+	if err != nil {
+		return 0, err
+	}
+	defer f.Close()
+
+	reader := bufio.NewReader(f)
+
+	// The Faiss index file format starts with a 4-byte magic number (fourcc)
+	// identifying the index type. We need to skip this.
+	magic := make([]byte, 4)
+	if _, err := io.ReadFull(reader, magic); err != nil {
+		return 0, fmt.Errorf("could not read magic string: %w", err)
+	}
+
+	// The header then contains the dimension 'd' (int32) followed by
+	// the total number of vectors 'ntotal' (int64).
+	var d int32
+	if err := binary.Read(reader, binary.LittleEndian, &d); err != nil {
+		return 0, fmt.Errorf("could not read dimension: %w", err)
+	}
+
+	var ntotal int64
+	if err := binary.Read(reader, binary.LittleEndian, &ntotal); err != nil {
+		return 0, fmt.Errorf("could not read ntotal: %w", err)
+	}
+
+	return ntotal, nil
 }
 
 // WriteIndexBinary writes an index to a file with binary format
