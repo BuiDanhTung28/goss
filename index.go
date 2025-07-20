@@ -3,6 +3,7 @@ package faiss
 /*
 #include <stdlib.h>
 #include <faiss/c_api/Index_c.h>
+#include <faiss/c_api/index_io_c.h>
 #include <faiss/c_api/impl/AuxIndexStructures_c.h>
 #include <faiss/c_api/index_factory_c.h>
 */
@@ -58,6 +59,9 @@ type Index interface {
 	// RemoveIDs removes the vectors specified by sel from the index.
 	// Returns the number of elements removed and error.
 	RemoveIDs(sel *IDSelector) (int, error)
+
+	// Write saves the index to a file.
+	Write(fname string) error
 
 	// Delete frees the memory used by the index.
 	Delete()
@@ -281,6 +285,20 @@ func (idx *faissIndex) RemoveIDs(sel *IDSelector) (int, error) {
 		return 0, wrapError(getLastError(), "remove_ids operation")
 	}
 	return int(nRemoved), nil
+}
+
+func (idx *faissIndex) Write(fname string) error {
+	if idx.idx == nil {
+		return ErrNullPointer
+	}
+
+	cname := C.CString(fname)
+	defer C.free(unsafe.Pointer(cname))
+
+	if c := C.faiss_write_index_fname(idx.idx, cname); c != 0 {
+		return wrapError(getLastError(), "write operation")
+	}
+	return nil
 }
 
 func (idx *faissIndex) Delete() {

@@ -6,10 +6,12 @@ package faiss
 */
 import "C"
 import (
+	"bufio"
+	"encoding/binary"
 	"fmt"
+	"io"
 	"os"
 	"path/filepath"
-	"runtime"
 	"strings"
 	"time"
 	"unsafe"
@@ -22,61 +24,74 @@ const (
 )
 
 // WriteIndex writes an index to a file.
-// The index is serialized in the FAISS binary format.
-func WriteIndex(idx Index, filename string) error {
+func WriteIndex(idx Index, fname string) error {
 	if idx == nil {
 		return fmt.Errorf("index is nil")
 	}
 
-	if filename == "" {
+	if fname == "" {
 		return fmt.Errorf("filename is empty")
 	}
 
-	// Validate the path
-	if err := ValidateFilePath(filename, false); err != nil {
-		return wrapError(err, "write index path validation")
-	}
-
 	// Create directory if it doesn't exist
-	dir := filepath.Dir(filename)
+	dir := filepath.Dir(fname)
 	if err := os.MkdirAll(dir, 0755); err != nil {
-		return wrapError(err, "create directory")
+		return fmt.Errorf("could not create directory: %w", err)
 	}
 
-	cfname := C.CString(filename)
+	cfname := C.CString(fname)
 	defer C.free(unsafe.Pointer(cfname))
 
 	if c := C.faiss_write_index_fname(idx.cPtr(), cfname); c != 0 {
-		return wrapError(getLastError(), "write index")
+		return getLastError()
 	}
 
 	return nil
 }
 
 // ReadIndex reads an index from a file.
-// The ioflags parameter controls how the file is opened.
-func ReadIndex(filename string, ioflags int) (*IndexImpl, error) {
-	if filename == "" {
-		return nil, fmt.Errorf("filename is empty")
-	}
-
-	// Validate the path
-	if err := ValidateFilePath(filename, true); err != nil {
-		return nil, wrapError(err, "read index path validation")
-	}
-
-	cfname := C.CString(filename)
+func ReadIndex(fname string, ioflags int) (Index, error) {
+	cfname := C.CString(fname)
 	defer C.free(unsafe.Pointer(cfname))
 
 	var cIdx *C.FaissIndex
 	if c := C.faiss_read_index_fname(cfname, C.int(ioflags), &cIdx); c != 0 {
-		return nil, wrapError(getLastError(), "read index")
+		return nil, getLastError()
+	}
+	return NewFaissIndex(cIdx), nil
+}
+
+// GetNtotalFromIndexFile reads the number of vectors from a Faiss index file
+// without loading the entire index into memory.
+func GetNtotalFromIndexFile(filename string) (int64, error) {
+	f, err := os.Open(filename)
+	if err != nil {
+		return 0, err
+	}
+	defer f.Close()
+
+	reader := bufio.NewReader(f)
+
+	// The Faiss index file format starts with a 4-byte magic number (fourcc)
+	// identifying the index type. We need to skip this.
+	magic := make([]byte, 4)
+	if _, err := io.ReadFull(reader, magic); err != nil {
+		return 0, fmt.Errorf("could not read magic string: %w", err)
 	}
 
-	idx := &faissIndex{idx: cIdx}
-	runtime.SetFinalizer(idx, (*faissIndex).Delete)
+	// The header then contains the dimension 'd' (int32) followed by
+	// the total number of vectors 'ntotal' (int64).
+	var d int32
+	if err := binary.Read(reader, binary.LittleEndian, &d); err != nil {
+		return 0, fmt.Errorf("could not read dimension: %w", err)
+	}
 
-	return &IndexImpl{idx}, nil
+	var ntotal int64
+	if err := binary.Read(reader, binary.LittleEndian, &ntotal); err != nil {
+		return 0, fmt.Errorf("could not read ntotal: %w", err)
+	}
+
+	return ntotal, nil
 }
 
 // WriteIndexBinary writes an index to a file with binary format
@@ -86,7 +101,11 @@ func WriteIndexBinary(idx Index, filename string) error {
 
 // ReadIndexBinary reads an index from a binary file
 func ReadIndexBinary(filename string) (*IndexImpl, error) {
-	return ReadIndex(filename, 0)
+	idx, err := ReadIndex(filename, 0)
+	if err != nil {
+		return nil, err
+	}
+	return idx.(*IndexImpl), nil
 }
 
 // WriteIndexMmap writes an index optimized for memory mapping
@@ -96,7 +115,11 @@ func WriteIndexMmap(idx Index, filename string) error {
 
 // ReadIndexMmap reads an index with memory mapping
 func ReadIndexMmap(filename string) (*IndexImpl, error) {
-	return ReadIndex(filename, IOFlagMmap)
+	idx, err := ReadIndex(filename, IOFlagMmap)
+	if err != nil {
+		return nil, err
+	}
+	return idx.(*IndexImpl), nil
 }
 
 // WriteIndexReadOnly writes an index for read-only access
@@ -106,7 +129,11 @@ func WriteIndexReadOnly(idx Index, filename string) error {
 
 // ReadIndexReadOnly reads an index in read-only mode
 func ReadIndexReadOnly(filename string) (*IndexImpl, error) {
-	return ReadIndex(filename, IOFlagReadOnly)
+	idx, err := ReadIndex(filename, IOFlagReadOnly)
+	if err != nil {
+		return nil, err
+	}
+	return idx.(*IndexImpl), nil
 }
 
 // IndexFileInfo contains information about an index file
@@ -374,7 +401,7 @@ func (s *IndexSerializer) ReadIndex(filename string) (*IndexImpl, error) {
 			idx.D(), idx.Ntotal())
 	}
 
-	return idx, nil
+	return idx.(*IndexImpl), nil
 }
 
 // BatchIndexManager manages multiple index files
