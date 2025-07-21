@@ -351,30 +351,6 @@ func (r *RangeSearchResult) Labels() (labels []int64, distances []float32) {
 	return
 }
 
-// GetQueryResults returns the results for a specific query index
-func (r *RangeSearchResult) GetQueryResults(queryIdx int) (labels []int64, distances []float32) {
-	if r.rsr == nil || queryIdx < 0 || queryIdx >= r.Nq() {
-		return nil, nil
-	}
-
-	allLabels, allDistances := r.Labels()
-	lims := r.Lims()
-
-	if queryIdx >= len(lims)-1 {
-		return nil, nil
-	}
-
-	start := lims[queryIdx]
-	end := lims[queryIdx+1]
-
-	if start >= 0 && end >= start && end <= len(allLabels) {
-		labels = allLabels[start:end]
-		distances = allDistances[start:end]
-	}
-
-	return
-}
-
 // Delete frees the memory associated with r.
 func (r *RangeSearchResult) Delete() {
 	if r.rsr != nil {
@@ -384,11 +360,6 @@ func (r *RangeSearchResult) Delete() {
 	runtime.SetFinalizer(r, nil)
 }
 
-// IndexImpl is an abstract structure for an index.
-type IndexImpl struct {
-	Index
-}
-
 // IndexFactory builds a composite index using the factory pattern.
 // description is a comma-separated list of components.
 // Common descriptions:
@@ -396,7 +367,7 @@ type IndexImpl struct {
 //   - "IVF100,Flat" - IVF with 100 centroids
 //   - "IVF100,PQ8" - IVF with 100 centroids and 8-bit PQ
 //   - "HNSW32" - HNSW with 32 connections per node
-func IndexFactory(d int, description string, metric int) (*IndexImpl, error) {
+func IndexFactory(d int, description string, metric int) (Index, error) {
 	if d <= 0 {
 		return nil, ErrInvalidDimension
 	}
@@ -417,127 +388,5 @@ func IndexFactory(d int, description string, metric int) (*IndexImpl, error) {
 	idx := &faissIndex{idx: cIdx}
 	runtime.SetFinalizer(idx, (*faissIndex).Delete)
 
-	return &IndexImpl{idx}, nil
-}
-
-// IndexFactoryWithParams builds a composite index with custom parameters
-func IndexFactoryWithParams(d int, indexType string, metric int, params map[string]interface{}) (*IndexImpl, error) {
-	description := CreateIndexDescription(indexType, params)
-	return IndexFactory(d, description, metric)
-}
-
-// Common factory methods for convenience
-
-// NewFlatIndex creates a new flat (exact search) index
-func NewFlatIndex(d int, metric int) (*IndexImpl, error) {
-	return IndexFactory(d, "Flat", metric)
-}
-
-// NewIVFFlatIndex creates a new IVF flat index
-func NewIVFFlatIndex(d int, nlist int, metric int) (*IndexImpl, error) {
-	description := fmt.Sprintf("IVF%d,Flat", nlist)
-	return IndexFactory(d, description, metric)
-}
-
-// NewIVFPQIndex creates a new IVF PQ index
-func NewIVFPQIndex(d int, nlist, m, nbits int, metric int) (*IndexImpl, error) {
-	description := fmt.Sprintf("IVF%d,PQ%dx%d", nlist, m, nbits)
-	return IndexFactory(d, description, metric)
-}
-
-// NewHNSWIndex creates a new HNSW index
-func NewHNSWIndex(d int, M int, metric int) (*IndexImpl, error) {
-	description := fmt.Sprintf("HNSW%d", M)
-	return IndexFactory(d, description, metric)
-}
-
-// Utility methods for IndexImpl
-
-// GetDescription returns a string description of the index
-func (idx *IndexImpl) GetDescription() string {
-	// This would require additional C bindings to get index description
-	return "unknown"
-}
-
-// GetMemoryUsage returns the estimated memory usage of the index
-func (idx *IndexImpl) GetMemoryUsage() int64 {
-	if idx.Index == nil {
-		return 0
-	}
-	return EstimateMemoryUsage("unknown", idx.D(), idx.Ntotal(), nil)
-}
-
-// Copy creates a copy of the index
-func (idx *IndexImpl) Copy() (*IndexImpl, error) {
-	// This would require additional C bindings for index cloning
-	return nil, fmt.Errorf("copy not implemented")
-}
-
-// BatchAdd adds vectors in batches to avoid memory issues
-func (idx *IndexImpl) BatchAdd(vectors []float32, batchSize int) error {
-	if idx.Index == nil {
-		return ErrNullPointer
-	}
-
-	d := idx.D()
-	if err := ValidateVectors(vectors, d); err != nil {
-		return err
-	}
-
-	if batchSize <= 0 {
-		batchSize = 1000 // default batch size
-	}
-
-	n := len(vectors) / d
-	for i := 0; i < n; i += batchSize {
-		end := i + batchSize
-		if end > n {
-			end = n
-		}
-
-		batch := GetVectorBatch(vectors, d, i, end-i)
-		if err := idx.Add(batch); err != nil {
-			return wrapError(err, fmt.Sprintf("batch add at index %d", i))
-		}
-	}
-
-	return nil
-}
-
-// BatchSearch performs search in batches
-func (idx *IndexImpl) BatchSearch(queries []float32, k int64, batchSize int) ([]float32, []int64, error) {
-	if idx.Index == nil {
-		return nil, nil, ErrNullPointer
-	}
-
-	d := idx.D()
-	if err := ValidateVectors(queries, d); err != nil {
-		return nil, nil, err
-	}
-
-	if batchSize <= 0 {
-		batchSize = 100 // default batch size
-	}
-
-	nq := len(queries) / d
-	allDistances := make([]float32, 0, int64(nq)*k)
-	allLabels := make([]int64, 0, int64(nq)*k)
-
-	for i := 0; i < nq; i += batchSize {
-		end := i + batchSize
-		if end > nq {
-			end = nq
-		}
-
-		batch := GetVectorBatch(queries, d, i, end-i)
-		distances, labels, err := idx.Search(batch, k)
-		if err != nil {
-			return nil, nil, wrapError(err, fmt.Sprintf("batch search at index %d", i))
-		}
-
-		allDistances = append(allDistances, distances...)
-		allLabels = append(allLabels, labels...)
-	}
-
-	return allDistances, allLabels, nil
+	return idx, nil
 }
