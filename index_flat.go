@@ -381,43 +381,6 @@ type FlatIndexInfo struct {
 	MemoryUsage int64
 }
 
-// AsFlat casts idx to a flat index.
-// AsFlat panics if idx is not a flat index.
-func (idx *IndexImpl) AsFlat() *IndexFlat {
-	if idx.Index == nil {
-		panic("index is nil")
-	}
-
-	ptr := C.faiss_IndexFlat_cast(idx.cPtr())
-	if ptr == nil {
-		panic("index is not a flat index")
-	}
-
-	flatIdx := &faissIndex{idx: ptr}
-	return &IndexFlat{flatIdx}
-}
-
-// TryAsFlat attempts to cast idx to a flat index.
-// Returns nil if idx is not a flat index.
-func (idx *IndexImpl) TryAsFlat() *IndexFlat {
-	if idx.Index == nil {
-		return nil
-	}
-
-	ptr := C.faiss_IndexFlat_cast(idx.cPtr())
-	if ptr == nil {
-		return nil
-	}
-
-	flatIdx := &faissIndex{idx: ptr}
-	return &IndexFlat{flatIdx}
-}
-
-// IsFlat checks if the index is a flat index.
-func (idx *IndexImpl) IsFlat() bool {
-	return idx.TryAsFlat() != nil
-}
-
 // FlatIndexBuilder helps build flat indices with validation.
 type FlatIndexBuilder struct {
 	dimension int
