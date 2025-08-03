@@ -59,7 +59,7 @@ Once the dependencies are installed, you can get and build the module from withi
 1.  **Get the module:**
     *(Assuming your project is already a Go module. Replace with your actual repo path if needed.)*
     ```sh
-    go get -d ./...
+    go get github.com/BuiDanhTung28/goss
     ```
 
 2.  **Build the Faiss static library:**
