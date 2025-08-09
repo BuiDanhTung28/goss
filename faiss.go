@@ -1,3 +1,5 @@
+// #cgo darwin,arm64 LDFLAGS: -L${SRCDIR}/internal/lib/darwin_arm64 -lfaiss -lstdc++
+//
 //go:generate ./build.sh
 package faiss
 
