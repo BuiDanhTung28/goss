@@ -31,13 +31,15 @@ fi
 ROOT_DIR=$(cd "$(dirname "$0")" && pwd)
 FAISS_LIB_DIR="$ROOT_DIR/internal/lib/darwin_arm64"
 FAISS_STATIC_LIB="$FAISS_LIB_DIR/libfaiss.a"
+FAISS_C_STATIC_LIB="$FAISS_LIB_DIR/libfaiss_c.a"
 
-if [ -f "$FAISS_STATIC_LIB" ]; then
-  echo "Faiss static library already exists. Skipping build."
+# Nếu cả hai thư viện đều đã tồn tại thì skip build
+if [ -f "$FAISS_STATIC_LIB" ] && [ -f "$FAISS_C_STATIC_LIB" ]; then
+  echo "Faiss static libraries already exist. Skipping build."
   exit 0
 fi
 
-echo "Building Faiss static library with C API enabled..."
+echo "Building Faiss static libraries with C API enabled..."
 
 FAISS_SOURCE_DIR="$ROOT_DIR/faiss_source"
 FAISS_BUILD_DIR="$ROOT_DIR/internal/build"
@@ -52,10 +54,15 @@ cmake -S "$FAISS_SOURCE_DIR" -B "$FAISS_BUILD_DIR" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 
+# Build core library
 make -C "$FAISS_BUILD_DIR" -j faiss
+
+# Build C API static library
+make -C "$FAISS_BUILD_DIR" -j faiss_c
 
 mkdir -p "$FAISS_LIB_DIR"
 
 cp "$FAISS_BUILD_DIR/faiss/libfaiss.a" "$FAISS_STATIC_LIB"
+cp "$FAISS_BUILD_DIR/c_api/libfaiss_c.a" "$FAISS_C_STATIC_LIB"
 
-echo "Faiss static library built successfully."
+echo "Faiss static libraries built successfully."
