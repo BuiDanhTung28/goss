@@ -45,4 +45,3 @@ temp/
 
 # Build artifacts from Faiss
 internal/build
-internal/lib 
