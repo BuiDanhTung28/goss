@@ -45,23 +45,24 @@ events:
         # 1 "<command line>" 1
         # 1 "<built-in>" 2
         # 1 "apple-sdk.cpp" 2
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
-        # 86 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
-        # 87 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
-        # 206 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
-        # 168 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
-        # 153 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
-        # 154 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
-        # 169 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
-        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 177 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 178 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 179 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
         # 2 "apple-sdk.cpp" 2
         
         
-      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
   -
     kind: "try_compile-v1"
     backtrace:
@@ -71,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -86,37 +87,38 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d8659/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d8659.dir/build.make CMakeFiles/cmTC_d8659.dir/build
-        Building CXX object CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_8f5fc/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_8f5fc.dir/build.make CMakeFiles/cmTC_8f5fc.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw'
+        Building CXX object CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 15.0.0 (clang-1500.0.40.1)
         Target: arm64-apple-darwin24.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin24.2.0
-        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
-        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
         #include "..." search starts here:
         #include <...> search starts here:
          /usr/local/include
-         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
-         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
-         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_d8659
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8659.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_8f5fc
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f5fc.dir/link.txt --verbose=1
         Apple clang version 15.0.0 (clang-1500.0.40.1)
         Target: arm64-apple-darwin24.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_d8659 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_8f5fc -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:dyld-1015.7
         BUILD 16:59:34 Oct  1 2023
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -126,7 +128,8 @@ events:
         Library search paths:
         	/usr/local/lib
         Framework search paths:
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d8659
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8f5fc
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw'
         
       exitCode: 0
   -
@@ -149,17 +152,17 @@ events:
         found start of include info
         found start of implicit include info
           add: [/usr/local/include]
-          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
           add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
           add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         end of search list found
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
-        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
         collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
       
       
   -
@@ -172,37 +175,38 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL']
+        ignore line: [Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d8659/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d8659.dir/build.make CMakeFiles/cmTC_d8659.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_8f5fc/fast]
+        ignore line: [/opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_8f5fc.dir/build.make CMakeFiles/cmTC_8f5fc.dir/build]
+        ignore line: [gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw']
+        ignore line: [Building CXX object CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
         ignore line: [Target: arm64-apple-darwin24.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-sqPwWL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0qngCw -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin24.2.0]
-        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
-        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
         ignore line: [ /usr/local/include]
-        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_d8659]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8659.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_8f5fc]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f5fc.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
         ignore line: [Target: arm64-apple-darwin24.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_d8659 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_8f5fc -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -212,17 +216,17 @@ events:
           arg [arm64] ==> ignore
           arg [-platform_version] ==> ignore
           arg [macos] ==> ignore
-          arg [14.0.0] ==> ignore
-          arg [14.0] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.2] ==> ignore
           arg [-syslibroot] ==> ignore
-          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d8659] ==> ignore
+          arg [cmTC_8f5fc] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_d8659.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_8f5fc.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
@@ -263,8 +267,8 @@ events:
       - "faiss/CMakeLists.txt:380 (find_package)"
     description: "Detecting CXX OpenMP compiler info"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rD1RQN"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rD1RQN"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -278,18 +282,20 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rD1RQN'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f964d/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f964d.dir/build.make CMakeFiles/cmTC_f964d.dir/build
-        Building CXX object CMakeFiles/cmTC_f964d.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_f964d.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f964d.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f964d.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rD1RQN/OpenMPTryFlag.cpp
-        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rD1RQN/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_eb111/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_eb111.dir/build.make CMakeFiles/cmTC_eb111.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr'
+        Building CXX object CMakeFiles/cmTC_eb111.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_eb111.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_eb111.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_eb111.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr/OpenMPTryFlag.cpp
+        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
         #include <omp.h>
                  ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_f964d.dir/OpenMPTryFlag.cpp.o] Error 1
-        make: *** [cmTC_f964d/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_eb111.dir/build.make:82: CMakeFiles/cmTC_eb111.dir/OpenMPTryFlag.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-GJiBYr'
+        gmake: *** [Makefile:134: cmTC_eb111/fast] Error 2
         
       exitCode: 2
   -
@@ -300,8 +306,8 @@ events:
       - "faiss/CMakeLists.txt:380 (find_package)"
     description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib'"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BGAidC"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BGAidC"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -315,18 +321,20 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BGAidC'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_94f27/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_94f27.dir/build.make CMakeFiles/cmTC_94f27.dir/build
-        Building CXX object CMakeFiles/cmTC_94f27.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++   -std=gnu++17 -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_94f27.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_94f27.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_94f27.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BGAidC/OpenMPTryFlag.cpp
-        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BGAidC/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_98954/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_98954.dir/build.make CMakeFiles/cmTC_98954.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd'
+        Building CXX object CMakeFiles/cmTC_98954.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -std=gnu++17 -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_98954.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_98954.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_98954.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd/OpenMPTryFlag.cpp
+        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
         #include <omp.h>
                  ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_94f27.dir/OpenMPTryFlag.cpp.o] Error 1
-        make: *** [cmTC_94f27/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_98954.dir/build.make:82: CMakeFiles/cmTC_98954.dir/OpenMPTryFlag.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-kx0jrd'
+        gmake: *** [Makefile:134: cmTC_98954/fast] Error 2
         
       exitCode: 2
   -
@@ -337,8 +345,8 @@ events:
       - "faiss/CMakeLists.txt:380 (find_package)"
     description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib' and '/opt/homebrew/opt/libomp/include'"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0sRSBI"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0sRSBI"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -352,15 +360,17 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0sRSBI'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_14b94/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_14b94.dir/build.make CMakeFiles/cmTC_14b94.dir/build
-        Building CXX object CMakeFiles/cmTC_14b94.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -std=gnu++17 -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_14b94.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_14b94.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_14b94.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0sRSBI/OpenMPTryFlag.cpp
-        Linking CXX executable cmTC_14b94
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14b94.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_14b94.dir/OpenMPTryFlag.cpp.o -o cmTC_14b94  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_fce89/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_fce89.dir/build.make CMakeFiles/cmTC_fce89.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks'
+        Building CXX object CMakeFiles/cmTC_fce89.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -std=gnu++17 -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_fce89.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_fce89.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_fce89.dir/OpenMPTryFlag.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_fce89
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fce89.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fce89.dir/OpenMPTryFlag.cpp.o -o cmTC_fce89  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LFnbks'
         
       exitCode: 0
   -
@@ -371,8 +381,8 @@ events:
       - "faiss/CMakeLists.txt:380 (find_package)"
     description: "Detecting CXX OpenMP version"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LKLkfR"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LKLkfR"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -386,15 +396,17 @@ events:
       variable: "OpenMP_SPECTEST_CXX_"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LKLkfR'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e1726/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e1726.dir/build.make CMakeFiles/cmTC_e1726.dir/build
-        Building CXX object CMakeFiles/cmTC_e1726.dir/OpenMPCheckVersion.cpp.o
-        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_e1726.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_e1726.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_e1726.dir/OpenMPCheckVersion.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-LKLkfR/OpenMPCheckVersion.cpp
-        Linking CXX executable cmTC_e1726
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1726.dir/link.txt --verbose=1
-        /usr/bin/c++  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e1726.dir/OpenMPCheckVersion.cpp.o -o cmTC_e1726
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_a4e54/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_a4e54.dir/build.make CMakeFiles/cmTC_a4e54.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz'
+        Building CXX object CMakeFiles/cmTC_a4e54.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_a4e54.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_a4e54.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_a4e54.dir/OpenMPCheckVersion.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_a4e54
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4e54.dir/link.txt --verbose=1
+        /usr/bin/c++  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a4e54.dir/OpenMPCheckVersion.cpp.o -o cmTC_a4e54
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0rWnsz'
         
       exitCode: 0
   -
@@ -409,8 +421,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BeAnog"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BeAnog"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -424,15 +436,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BeAnog'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_382a3/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_382a3.dir/build.make CMakeFiles/cmTC_382a3.dir/build
-        Building CXX object CMakeFiles/cmTC_382a3.dir/src.cxx.o
-        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_382a3.dir/src.cxx.o -MF CMakeFiles/cmTC_382a3.dir/src.cxx.o.d -o CMakeFiles/cmTC_382a3.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BeAnog/src.cxx
-        Linking CXX executable cmTC_382a3
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_382a3.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_382a3.dir/src.cxx.o -o cmTC_382a3
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_74e5e/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_74e5e.dir/build.make CMakeFiles/cmTC_74e5e.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw'
+        Building CXX object CMakeFiles/cmTC_74e5e.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_74e5e.dir/src.cxx.o -MF CMakeFiles/cmTC_74e5e.dir/src.cxx.o.d -o CMakeFiles/cmTC_74e5e.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw/src.cxx
+        Linking CXX executable cmTC_74e5e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74e5e.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_74e5e.dir/src.cxx.o -o cmTC_74e5e
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lAv7Zw'
         
       exitCode: 0
   -
@@ -445,8 +459,8 @@ events:
     checks:
       - "Looking for sgemm_"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-EwJiyi"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-EwJiyi"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -460,21 +474,23 @@ events:
       variable: "BLAS_WORKS"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-EwJiyi'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1d9e8/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1d9e8.dir/build.make CMakeFiles/cmTC_1d9e8.dir/build
-        Building CXX object CMakeFiles/cmTC_1d9e8.dir/CheckFunctionExists.cxx.o
-        /usr/bin/c++   -DCHECK_FUNCTION_EXISTS=sgemm_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_1d9e8.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_1d9e8.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_1d9e8.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-EwJiyi/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_1d9e8
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d9e8.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_270ef/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_270ef.dir/build.make CMakeFiles/cmTC_270ef.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3'
+        Building CXX object CMakeFiles/cmTC_270ef.dir/CheckFunctionExists.cxx.o
+        /usr/bin/c++   -DCHECK_FUNCTION_EXISTS=sgemm_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_270ef.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_270ef.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_270ef.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_270ef
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_270ef.dir/link.txt --verbose=1
         ld: Undefined symbols:
           _sgemm_, referenced from:
               _main in CheckFunctionExists.cxx.o
         clang: error: linker command failed with exit code 1 (use -v to see invocation)
-        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1d9e8.dir/CheckFunctionExists.cxx.o -o cmTC_1d9e8
-        make[1]: *** [cmTC_1d9e8] Error 1
-        make: *** [cmTC_1d9e8/fast] Error 2
+        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_270ef.dir/CheckFunctionExists.cxx.o -o cmTC_270ef
+        gmake[1]: *** [CMakeFiles/cmTC_270ef.dir/build.make:103: cmTC_270ef] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-2edOy3'
+        gmake: *** [Makefile:134: cmTC_270ef/fast] Error 2
         
       exitCode: 2
   -
@@ -487,8 +503,8 @@ events:
     checks:
       - "Looking for dgemm_"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-bAyKYs"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-bAyKYs"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -502,15 +518,17 @@ events:
       variable: "BLAS_Accelerate_WORKS"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-bAyKYs'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9022a/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9022a.dir/build.make CMakeFiles/cmTC_9022a.dir/build
-        Building CXX object CMakeFiles/cmTC_9022a.dir/CheckFunctionExists.cxx.o
-        /usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -DCHECK_FUNCTION_EXISTS=dgemm_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_9022a.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_9022a.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_9022a.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-bAyKYs/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_9022a
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9022a.dir/link.txt --verbose=1
-        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=dgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9022a.dir/CheckFunctionExists.cxx.o -o cmTC_9022a  -framework Accelerate
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_a941c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_a941c.dir/build.make CMakeFiles/cmTC_a941c.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef'
+        Building CXX object CMakeFiles/cmTC_a941c.dir/CheckFunctionExists.cxx.o
+        /usr/bin/c++  -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -DCHECK_FUNCTION_EXISTS=dgemm_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_a941c.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_a941c.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_a941c.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_a941c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a941c.dir/link.txt --verbose=1
+        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=dgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a941c.dir/CheckFunctionExists.cxx.o -o cmTC_a941c  -framework Accelerate
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-T7ORef'
         
       exitCode: 0
   -
@@ -523,8 +541,8 @@ events:
     checks:
       - "Looking for cheev_"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-52iQdy"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-52iQdy"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -538,15 +556,17 @@ events:
       variable: "LAPACK_WORKS"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-52iQdy'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4423f/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4423f.dir/build.make CMakeFiles/cmTC_4423f.dir/build
-        Building CXX object CMakeFiles/cmTC_4423f.dir/CheckFunctionExists.cxx.o
-        /usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -DCHECK_FUNCTION_EXISTS=cheev_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_4423f.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_4423f.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_4423f.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-52iQdy/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_4423f
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4423f.dir/link.txt --verbose=1
-        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=cheev_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4423f.dir/CheckFunctionExists.cxx.o -o cmTC_4423f  -framework Accelerate -lm -ldl
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_b3b8e/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b3b8e.dir/build.make CMakeFiles/cmTC_b3b8e.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB'
+        Building CXX object CMakeFiles/cmTC_b3b8e.dir/CheckFunctionExists.cxx.o
+        /usr/bin/c++  -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -DCHECK_FUNCTION_EXISTS=cheev_ -std=gnu++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_b3b8e.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_b3b8e.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_b3b8e.dir/CheckFunctionExists.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_b3b8e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3b8e.dir/link.txt --verbose=1
+        /usr/bin/c++  -DCHECK_FUNCTION_EXISTS=cheev_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b3b8e.dir/CheckFunctionExists.cxx.o -o cmTC_b3b8e  -framework Accelerate -lm -ldl
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-uWj8CB'
         
       exitCode: 0
   -
@@ -586,23 +606,24 @@ events:
         # 1 "<command line>" 1
         # 1 "<built-in>" 2
         # 1 "apple-sdk.c" 2
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
-        # 86 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
-        # 87 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
-        # 206 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
-        # 168 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
-        # 153 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
-        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
-        # 154 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
-        # 169 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
-        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 177 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 178 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 179 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
         # 2 "apple-sdk.c" 2
         
         
-      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
   -
     kind: "try_compile-v1"
     backtrace:
@@ -612,8 +633,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -626,36 +647,37 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0b423/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0b423.dir/build.make CMakeFiles/cmTC_0b423.dir/build
-        Building C object CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_3bd3c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3bd3c.dir/build.make CMakeFiles/cmTC_3bd3c.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB'
+        Building C object CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 15.0.0 (clang-1500.0.40.1)
         Target: arm64-apple-darwin24.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin24.2.0
-        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
-        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
         #include "..." search starts here:
         #include <...> search starts here:
          /usr/local/include
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
-         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
-         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_0b423
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b423.dir/link.txt --verbose=1
+        Linking C executable cmTC_3bd3c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bd3c.dir/link.txt --verbose=1
         Apple clang version 15.0.0 (clang-1500.0.40.1)
         Target: arm64-apple-darwin24.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_0b423 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_3bd3c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:dyld-1015.7
         BUILD 16:59:34 Oct  1 2023
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -665,7 +687,8 @@ events:
         Library search paths:
         	/usr/local/lib
         Framework search paths:
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -o cmTC_0b423
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -o cmTC_3bd3c
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB'
         
       exitCode: 0
   -
@@ -689,14 +712,14 @@ events:
         found start of implicit include info
           add: [/usr/local/include]
           add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
           add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         end of search list found
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
       
       
   -
@@ -709,36 +732,37 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj']
+        ignore line: [Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0b423/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0b423.dir/build.make CMakeFiles/cmTC_0b423.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_3bd3c/fast]
+        ignore line: [/opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3bd3c.dir/build.make CMakeFiles/cmTC_3bd3c.dir/build]
+        ignore line: [gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB']
+        ignore line: [Building C object CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
         ignore line: [Target: arm64-apple-darwin24.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-IRn4mj -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-oy72eB -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin24.2.0]
-        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
-        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
         ignore line: [ /usr/local/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
-        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_0b423]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b423.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_3bd3c]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bd3c.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
         ignore line: [Target: arm64-apple-darwin24.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_0b423 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_3bd3c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -748,17 +772,17 @@ events:
           arg [arm64] ==> ignore
           arg [-platform_version] ==> ignore
           arg [macos] ==> ignore
-          arg [14.0.0] ==> ignore
-          arg [14.0] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.2] ==> ignore
           arg [-syslibroot] ==> ignore
-          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_0b423] ==> ignore
+          arg [cmTC_3bd3c] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_0b423.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_3bd3c.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -798,8 +822,8 @@ events:
     checks:
       - "Looking for shm_open in rt"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rhAYj1"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rhAYj1"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -813,19 +837,21 @@ events:
       variable: "HAVE_LIB_RT"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rhAYj1'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d40d/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2d40d.dir/build.make CMakeFiles/cmTC_2d40d.dir/build
-        Building C object CMakeFiles/cmTC_2d40d.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shm_open -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_2d40d.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2d40d.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2d40d.dir/CheckFunctionExists.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rhAYj1/CheckFunctionExists.c
-        Linking C executable cmTC_2d40d
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d40d.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_d803c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_d803c.dir/build.make CMakeFiles/cmTC_d803c.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV'
+        Building C object CMakeFiles/cmTC_d803c.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shm_open -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_d803c.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d803c.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d803c.dir/CheckFunctionExists.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV/CheckFunctionExists.c
+        Linking C executable cmTC_d803c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d803c.dir/link.txt --verbose=1
         ld: library 'rt' not found
         clang: error: linker command failed with exit code 1 (use -v to see invocation)
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shm_open -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2d40d.dir/CheckFunctionExists.c.o -o cmTC_2d40d  -lrt
-        make[1]: *** [cmTC_2d40d] Error 1
-        make: *** [cmTC_2d40d/fast] Error 2
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shm_open -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d803c.dir/CheckFunctionExists.c.o -o cmTC_d803c  -lrt
+        gmake[1]: *** [CMakeFiles/cmTC_d803c.dir/build.make:103: cmTC_d803c] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-jLYzyV'
+        gmake: *** [Makefile:134: cmTC_d803c/fast] Error 2
         
       exitCode: 2
   -
@@ -839,8 +865,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WALL"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-SX0YwM"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-SX0YwM"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -854,15 +880,17 @@ events:
       variable: "HAVE_CXX_FLAG_WALL"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-SX0YwM'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9e592/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9e592.dir/build.make CMakeFiles/cmTC_9e592.dir/build
-        Building CXX object CMakeFiles/cmTC_9e592.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -Wall -std=c++17 -arch arm64 -fPIE   -Wall -MD -MT CMakeFiles/cmTC_9e592.dir/src.cxx.o -MF CMakeFiles/cmTC_9e592.dir/src.cxx.o.d -o CMakeFiles/cmTC_9e592.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-SX0YwM/src.cxx
-        Linking CXX executable cmTC_9e592
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e592.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9e592.dir/src.cxx.o -o cmTC_9e592
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_61dd1/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_61dd1.dir/build.make CMakeFiles/cmTC_61dd1.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx'
+        Building CXX object CMakeFiles/cmTC_61dd1.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -Wall -std=c++17 -arch arm64 -fPIE   -Wall -MD -MT CMakeFiles/cmTC_61dd1.dir/src.cxx.o -MF CMakeFiles/cmTC_61dd1.dir/src.cxx.o.d -o CMakeFiles/cmTC_61dd1.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx/src.cxx
+        Linking CXX executable cmTC_61dd1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61dd1.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_61dd1.dir/src.cxx.o -o cmTC_61dd1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-R5BYtx'
         
       exitCode: 0
   -
@@ -876,8 +904,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WEXTRA"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-zrrRB5"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-zrrRB5"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -891,15 +919,17 @@ events:
       variable: "HAVE_CXX_FLAG_WEXTRA"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-zrrRB5'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_50e9c/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_50e9c.dir/build.make CMakeFiles/cmTC_50e9c.dir/build
-        Building CXX object CMakeFiles/cmTC_50e9c.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -Wall  -Wextra -std=c++17 -arch arm64 -fPIE   -Wextra -MD -MT CMakeFiles/cmTC_50e9c.dir/src.cxx.o -MF CMakeFiles/cmTC_50e9c.dir/src.cxx.o.d -o CMakeFiles/cmTC_50e9c.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-zrrRB5/src.cxx
-        Linking CXX executable cmTC_50e9c
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50e9c.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_50e9c.dir/src.cxx.o -o cmTC_50e9c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_eb3c5/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_eb3c5.dir/build.make CMakeFiles/cmTC_eb3c5.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj'
+        Building CXX object CMakeFiles/cmTC_eb3c5.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -Wall  -Wextra -std=c++17 -arch arm64 -fPIE   -Wextra -MD -MT CMakeFiles/cmTC_eb3c5.dir/src.cxx.o -MF CMakeFiles/cmTC_eb3c5.dir/src.cxx.o.d -o CMakeFiles/cmTC_eb3c5.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj/src.cxx
+        Linking CXX executable cmTC_eb3c5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb3c5.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eb3c5.dir/src.cxx.o -o cmTC_eb3c5
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Dk1wgj'
         
       exitCode: 0
   -
@@ -913,8 +943,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WSHADOW"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-j9lktz"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-j9lktz"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -928,15 +958,17 @@ events:
       variable: "HAVE_CXX_FLAG_WSHADOW"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-j9lktz'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_213d5/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_213d5.dir/build.make CMakeFiles/cmTC_213d5.dir/build
-        Building CXX object CMakeFiles/cmTC_213d5.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHADOW  -Wall  -Wextra  -Wshadow -std=c++17 -arch arm64 -fPIE   -Wshadow -MD -MT CMakeFiles/cmTC_213d5.dir/src.cxx.o -MF CMakeFiles/cmTC_213d5.dir/src.cxx.o.d -o CMakeFiles/cmTC_213d5.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-j9lktz/src.cxx
-        Linking CXX executable cmTC_213d5
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_213d5.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_213d5.dir/src.cxx.o -o cmTC_213d5
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_c59ee/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_c59ee.dir/build.make CMakeFiles/cmTC_c59ee.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny'
+        Building CXX object CMakeFiles/cmTC_c59ee.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHADOW  -Wall  -Wextra  -Wshadow -std=c++17 -arch arm64 -fPIE   -Wshadow -MD -MT CMakeFiles/cmTC_c59ee.dir/src.cxx.o -MF CMakeFiles/cmTC_c59ee.dir/src.cxx.o.d -o CMakeFiles/cmTC_c59ee.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny/src.cxx
+        Linking CXX executable cmTC_c59ee
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c59ee.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c59ee.dir/src.cxx.o -o cmTC_c59ee
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-nsHtny'
         
       exitCode: 0
   -
@@ -950,8 +982,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-XOBV4Z"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-XOBV4Z"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -965,15 +997,17 @@ events:
       variable: "HAVE_CXX_FLAG_WFLOAT_EQUAL"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-XOBV4Z'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d1452/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d1452.dir/build.make CMakeFiles/cmTC_d1452.dir/build
-        Building CXX object CMakeFiles/cmTC_d1452.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WFLOAT_EQUAL  -Wall  -Wextra  -Wshadow  -Wfloat-equal -std=c++17 -arch arm64 -fPIE   -Wfloat-equal -MD -MT CMakeFiles/cmTC_d1452.dir/src.cxx.o -MF CMakeFiles/cmTC_d1452.dir/src.cxx.o.d -o CMakeFiles/cmTC_d1452.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-XOBV4Z/src.cxx
-        Linking CXX executable cmTC_d1452
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1452.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d1452.dir/src.cxx.o -o cmTC_d1452
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_60b94/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_60b94.dir/build.make CMakeFiles/cmTC_60b94.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe'
+        Building CXX object CMakeFiles/cmTC_60b94.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WFLOAT_EQUAL  -Wall  -Wextra  -Wshadow  -Wfloat-equal -std=c++17 -arch arm64 -fPIE   -Wfloat-equal -MD -MT CMakeFiles/cmTC_60b94.dir/src.cxx.o -MF CMakeFiles/cmTC_60b94.dir/src.cxx.o.d -o CMakeFiles/cmTC_60b94.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe/src.cxx
+        Linking CXX executable cmTC_60b94
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60b94.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_60b94.dir/src.cxx.o -o cmTC_60b94
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-e0cpAe'
         
       exitCode: 0
   -
@@ -987,8 +1021,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-qpjaxi"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-qpjaxi"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1002,15 +1036,17 @@ events:
       variable: "HAVE_CXX_FLAG_WOLD_STYLE_CAST"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-qpjaxi'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_432cc/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_432cc.dir/build.make CMakeFiles/cmTC_432cc.dir/build
-        Building CXX object CMakeFiles/cmTC_432cc.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WOLD_STYLE_CAST  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast -std=c++17 -arch arm64 -fPIE   -Wold-style-cast -MD -MT CMakeFiles/cmTC_432cc.dir/src.cxx.o -MF CMakeFiles/cmTC_432cc.dir/src.cxx.o.d -o CMakeFiles/cmTC_432cc.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-qpjaxi/src.cxx
-        Linking CXX executable cmTC_432cc
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_432cc.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_432cc.dir/src.cxx.o -o cmTC_432cc
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_b3618/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b3618.dir/build.make CMakeFiles/cmTC_b3618.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y'
+        Building CXX object CMakeFiles/cmTC_b3618.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WOLD_STYLE_CAST  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast -std=c++17 -arch arm64 -fPIE   -Wold-style-cast -MD -MT CMakeFiles/cmTC_b3618.dir/src.cxx.o -MF CMakeFiles/cmTC_b3618.dir/src.cxx.o.d -o CMakeFiles/cmTC_b3618.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y/src.cxx
+        Linking CXX executable cmTC_b3618
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3618.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b3618.dir/src.cxx.o -o cmTC_b3618
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgEW3y'
         
       exitCode: 0
   -
@@ -1024,8 +1060,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WCONVERSION"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0D8BAp"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0D8BAp"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1039,15 +1075,17 @@ events:
       variable: "HAVE_CXX_FLAG_WCONVERSION"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0D8BAp'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_edfb4/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_edfb4.dir/build.make CMakeFiles/cmTC_edfb4.dir/build
-        Building CXX object CMakeFiles/cmTC_edfb4.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WCONVERSION  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion -std=c++17 -arch arm64 -fPIE   -Wconversion -MD -MT CMakeFiles/cmTC_edfb4.dir/src.cxx.o -MF CMakeFiles/cmTC_edfb4.dir/src.cxx.o.d -o CMakeFiles/cmTC_edfb4.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0D8BAp/src.cxx
-        Linking CXX executable cmTC_edfb4
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edfb4.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_edfb4.dir/src.cxx.o -o cmTC_edfb4
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_6d430/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_6d430.dir/build.make CMakeFiles/cmTC_6d430.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP'
+        Building CXX object CMakeFiles/cmTC_6d430.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCONVERSION  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion -std=c++17 -arch arm64 -fPIE   -Wconversion -MD -MT CMakeFiles/cmTC_6d430.dir/src.cxx.o -MF CMakeFiles/cmTC_6d430.dir/src.cxx.o.d -o CMakeFiles/cmTC_6d430.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP/src.cxx
+        Linking CXX executable cmTC_6d430
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d430.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6d430.dir/src.cxx.o -o cmTC_6d430
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z9gPoP'
         
       exitCode: 0
   -
@@ -1061,8 +1099,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WERROR"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-atPlTa"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-atPlTa"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1076,15 +1114,17 @@ events:
       variable: "HAVE_CXX_FLAG_WERROR"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-atPlTa'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e388a/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e388a.dir/build.make CMakeFiles/cmTC_e388a.dir/build
-        Building CXX object CMakeFiles/cmTC_e388a.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WERROR  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror -std=c++17 -arch arm64 -fPIE   -Werror -MD -MT CMakeFiles/cmTC_e388a.dir/src.cxx.o -MF CMakeFiles/cmTC_e388a.dir/src.cxx.o.d -o CMakeFiles/cmTC_e388a.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-atPlTa/src.cxx
-        Linking CXX executable cmTC_e388a
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e388a.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e388a.dir/src.cxx.o -o cmTC_e388a
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_8c9f9/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_8c9f9.dir/build.make CMakeFiles/cmTC_8c9f9.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5'
+        Building CXX object CMakeFiles/cmTC_8c9f9.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WERROR  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror -std=c++17 -arch arm64 -fPIE   -Werror -MD -MT CMakeFiles/cmTC_8c9f9.dir/src.cxx.o -MF CMakeFiles/cmTC_8c9f9.dir/src.cxx.o.d -o CMakeFiles/cmTC_8c9f9.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5/src.cxx
+        Linking CXX executable cmTC_8c9f9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c9f9.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8c9f9.dir/src.cxx.o -o cmTC_8c9f9
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Zgi9v5'
         
       exitCode: 0
   -
@@ -1098,8 +1138,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-fEeWhW"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-fEeWhW"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1113,15 +1153,17 @@ events:
       variable: "HAVE_CXX_FLAG_WSUGGEST_OVERRIDE"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-fEeWhW'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c052d/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c052d.dir/build.make CMakeFiles/cmTC_c052d.dir/build
-        Building CXX object CMakeFiles/cmTC_c052d.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override -std=c++17 -arch arm64 -fPIE   -Wsuggest-override -MD -MT CMakeFiles/cmTC_c052d.dir/src.cxx.o -MF CMakeFiles/cmTC_c052d.dir/src.cxx.o.d -o CMakeFiles/cmTC_c052d.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-fEeWhW/src.cxx
-        Linking CXX executable cmTC_c052d
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c052d.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c052d.dir/src.cxx.o -o cmTC_c052d
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_98b6e/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_98b6e.dir/build.make CMakeFiles/cmTC_98b6e.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK'
+        Building CXX object CMakeFiles/cmTC_98b6e.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override -std=c++17 -arch arm64 -fPIE   -Wsuggest-override -MD -MT CMakeFiles/cmTC_98b6e.dir/src.cxx.o -MF CMakeFiles/cmTC_98b6e.dir/src.cxx.o.d -o CMakeFiles/cmTC_98b6e.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK/src.cxx
+        Linking CXX executable cmTC_98b6e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98b6e.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_98b6e.dir/src.cxx.o -o cmTC_98b6e
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-HOPVxK'
         
       exitCode: 0
   -
@@ -1135,8 +1177,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_PEDANTIC"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lIOhcU"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lIOhcU"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1150,15 +1192,17 @@ events:
       variable: "HAVE_CXX_FLAG_PEDANTIC"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lIOhcU'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f301e/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f301e.dir/build.make CMakeFiles/cmTC_f301e.dir/build
-        Building CXX object CMakeFiles/cmTC_f301e.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic -std=c++17 -arch arm64 -fPIE   -pedantic -MD -MT CMakeFiles/cmTC_f301e.dir/src.cxx.o -MF CMakeFiles/cmTC_f301e.dir/src.cxx.o.d -o CMakeFiles/cmTC_f301e.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-lIOhcU/src.cxx
-        Linking CXX executable cmTC_f301e
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f301e.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f301e.dir/src.cxx.o -o cmTC_f301e
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_840d9/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_840d9.dir/build.make CMakeFiles/cmTC_840d9.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg'
+        Building CXX object CMakeFiles/cmTC_840d9.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic -std=c++17 -arch arm64 -fPIE   -pedantic -MD -MT CMakeFiles/cmTC_840d9.dir/src.cxx.o -MF CMakeFiles/cmTC_840d9.dir/src.cxx.o.d -o CMakeFiles/cmTC_840d9.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg/src.cxx
+        Linking CXX executable cmTC_840d9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_840d9.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_840d9.dir/src.cxx.o -o cmTC_840d9
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z4aQSg'
         
       exitCode: 0
   -
@@ -1172,8 +1216,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-MjBeXt"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-MjBeXt"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1187,15 +1231,17 @@ events:
       variable: "HAVE_CXX_FLAG_PEDANTIC_ERRORS"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-MjBeXt'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2eaf7/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2eaf7.dir/build.make CMakeFiles/cmTC_2eaf7.dir/build
-        Building CXX object CMakeFiles/cmTC_2eaf7.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC_ERRORS  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -std=c++17 -arch arm64 -fPIE   -pedantic-errors -MD -MT CMakeFiles/cmTC_2eaf7.dir/src.cxx.o -MF CMakeFiles/cmTC_2eaf7.dir/src.cxx.o.d -o CMakeFiles/cmTC_2eaf7.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-MjBeXt/src.cxx
-        Linking CXX executable cmTC_2eaf7
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2eaf7.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2eaf7.dir/src.cxx.o -o cmTC_2eaf7
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_feb0b/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_feb0b.dir/build.make CMakeFiles/cmTC_feb0b.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9'
+        Building CXX object CMakeFiles/cmTC_feb0b.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC_ERRORS  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -std=c++17 -arch arm64 -fPIE   -pedantic-errors -MD -MT CMakeFiles/cmTC_feb0b.dir/src.cxx.o -MF CMakeFiles/cmTC_feb0b.dir/src.cxx.o.d -o CMakeFiles/cmTC_feb0b.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9/src.cxx
+        Linking CXX executable cmTC_feb0b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_feb0b.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_feb0b.dir/src.cxx.o -o cmTC_feb0b
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-puXMK9'
         
       exitCode: 0
   -
@@ -1209,8 +1255,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-7q7TON"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-7q7TON"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1224,15 +1270,17 @@ events:
       variable: "HAVE_CXX_FLAG_WSHORTEN_64_TO_32"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-7q7TON'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cde20/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cde20.dir/build.make CMakeFiles/cmTC_cde20.dir/build
-        Building CXX object CMakeFiles/cmTC_cde20.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32 -std=c++17 -arch arm64 -fPIE   -Wshorten-64-to-32 -MD -MT CMakeFiles/cmTC_cde20.dir/src.cxx.o -MF CMakeFiles/cmTC_cde20.dir/src.cxx.o.d -o CMakeFiles/cmTC_cde20.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-7q7TON/src.cxx
-        Linking CXX executable cmTC_cde20
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cde20.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cde20.dir/src.cxx.o -o cmTC_cde20
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_ec46b/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ec46b.dir/build.make CMakeFiles/cmTC_ec46b.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F'
+        Building CXX object CMakeFiles/cmTC_ec46b.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32 -std=c++17 -arch arm64 -fPIE   -Wshorten-64-to-32 -MD -MT CMakeFiles/cmTC_ec46b.dir/src.cxx.o -MF CMakeFiles/cmTC_ec46b.dir/src.cxx.o.d -o CMakeFiles/cmTC_ec46b.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F/src.cxx
+        Linking CXX executable cmTC_ec46b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec46b.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ec46b.dir/src.cxx.o -o cmTC_ec46b
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0okN1F'
         
       exitCode: 0
   -
@@ -1246,8 +1294,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-tpXFiI"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-tpXFiI"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1261,15 +1309,17 @@ events:
       variable: "HAVE_CXX_FLAG_FSTRICT_ALIASING"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-tpXFiI'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8cb36/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8cb36.dir/build.make CMakeFiles/cmTC_8cb36.dir/build
-        Building CXX object CMakeFiles/cmTC_8cb36.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing -std=c++17 -arch arm64 -fPIE   -fstrict-aliasing -MD -MT CMakeFiles/cmTC_8cb36.dir/src.cxx.o -MF CMakeFiles/cmTC_8cb36.dir/src.cxx.o.d -o CMakeFiles/cmTC_8cb36.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-tpXFiI/src.cxx
-        Linking CXX executable cmTC_8cb36
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cb36.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8cb36.dir/src.cxx.o -o cmTC_8cb36
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_b328f/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b328f.dir/build.make CMakeFiles/cmTC_b328f.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0'
+        Building CXX object CMakeFiles/cmTC_b328f.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing -std=c++17 -arch arm64 -fPIE   -fstrict-aliasing -MD -MT CMakeFiles/cmTC_b328f.dir/src.cxx.o -MF CMakeFiles/cmTC_b328f.dir/src.cxx.o.d -o CMakeFiles/cmTC_b328f.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0/src.cxx
+        Linking CXX executable cmTC_b328f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b328f.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b328f.dir/src.cxx.o -o cmTC_b328f
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-rvfeA0'
         
       exitCode: 0
   -
@@ -1283,8 +1333,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z2p46D"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z2p46D"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1298,15 +1348,17 @@ events:
       variable: "HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z2p46D'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e41b0/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e41b0.dir/build.make CMakeFiles/cmTC_e41b0.dir/build
-        Building CXX object CMakeFiles/cmTC_e41b0.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations -std=c++17 -arch arm64 -fPIE   -Wno-deprecated-declarations -MD -MT CMakeFiles/cmTC_e41b0.dir/src.cxx.o -MF CMakeFiles/cmTC_e41b0.dir/src.cxx.o.d -o CMakeFiles/cmTC_e41b0.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-Z2p46D/src.cxx
-        Linking CXX executable cmTC_e41b0
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e41b0.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e41b0.dir/src.cxx.o -o cmTC_e41b0
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_dd416/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_dd416.dir/build.make CMakeFiles/cmTC_dd416.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj'
+        Building CXX object CMakeFiles/cmTC_dd416.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations -std=c++17 -arch arm64 -fPIE   -Wno-deprecated-declarations -MD -MT CMakeFiles/cmTC_dd416.dir/src.cxx.o -MF CMakeFiles/cmTC_dd416.dir/src.cxx.o.d -o CMakeFiles/cmTC_dd416.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj/src.cxx
+        Linking CXX executable cmTC_dd416
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd416.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_dd416.dir/src.cxx.o -o cmTC_dd416
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8KqIlj'
         
       exitCode: 0
   -
@@ -1320,8 +1372,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-3PxgWD"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-3PxgWD"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1335,15 +1387,17 @@ events:
       variable: "HAVE_CXX_FLAG_WNO_DEPRECATED"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-3PxgWD'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3dfc8/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3dfc8.dir/build.make CMakeFiles/cmTC_3dfc8.dir/build
-        Building CXX object CMakeFiles/cmTC_3dfc8.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated -std=c++17 -arch arm64 -fPIE   -Wno-deprecated -MD -MT CMakeFiles/cmTC_3dfc8.dir/src.cxx.o -MF CMakeFiles/cmTC_3dfc8.dir/src.cxx.o.d -o CMakeFiles/cmTC_3dfc8.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-3PxgWD/src.cxx
-        Linking CXX executable cmTC_3dfc8
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dfc8.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3dfc8.dir/src.cxx.o -o cmTC_3dfc8
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_55ce5/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_55ce5.dir/build.make CMakeFiles/cmTC_55ce5.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja'
+        Building CXX object CMakeFiles/cmTC_55ce5.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated -std=c++17 -arch arm64 -fPIE   -Wno-deprecated -MD -MT CMakeFiles/cmTC_55ce5.dir/src.cxx.o -MF CMakeFiles/cmTC_55ce5.dir/src.cxx.o.d -o CMakeFiles/cmTC_55ce5.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja/src.cxx
+        Linking CXX executable cmTC_55ce5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55ce5.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_55ce5.dir/src.cxx.o -o cmTC_55ce5
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-cTIMja'
         
       exitCode: 0
   -
@@ -1357,8 +1411,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JKFeI1"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JKFeI1"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1372,15 +1426,17 @@ events:
       variable: "HAVE_CXX_FLAG_WSTRICT_ALIASING"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JKFeI1'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b0623/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b0623.dir/build.make CMakeFiles/cmTC_b0623.dir/build
-        Building CXX object CMakeFiles/cmTC_b0623.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WSTRICT_ALIASING  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -std=c++17 -arch arm64 -fPIE   -Wstrict-aliasing -MD -MT CMakeFiles/cmTC_b0623.dir/src.cxx.o -MF CMakeFiles/cmTC_b0623.dir/src.cxx.o.d -o CMakeFiles/cmTC_b0623.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JKFeI1/src.cxx
-        Linking CXX executable cmTC_b0623
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0623.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b0623.dir/src.cxx.o -o cmTC_b0623
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_0feab/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0feab.dir/build.make CMakeFiles/cmTC_0feab.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR'
+        Building CXX object CMakeFiles/cmTC_0feab.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSTRICT_ALIASING  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -std=c++17 -arch arm64 -fPIE   -Wstrict-aliasing -MD -MT CMakeFiles/cmTC_0feab.dir/src.cxx.o -MF CMakeFiles/cmTC_0feab.dir/src.cxx.o.d -o CMakeFiles/cmTC_0feab.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR/src.cxx
+        Linking CXX executable cmTC_0feab
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0feab.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0feab.dir/src.cxx.o -o cmTC_0feab
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-JFdwWR'
         
       exitCode: 0
   -
@@ -1394,8 +1450,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BgGFfa"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BgGFfa"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1409,15 +1465,17 @@ events:
       variable: "HAVE_CXX_FLAG_WTHREAD_SAFETY"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BgGFfa'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8bb52/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8bb52.dir/build.make CMakeFiles/cmTC_8bb52.dir/build
-        Building CXX object CMakeFiles/cmTC_8bb52.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety -std=c++17 -arch arm64 -fPIE   -Wthread-safety -MD -MT CMakeFiles/cmTC_8bb52.dir/src.cxx.o -MF CMakeFiles/cmTC_8bb52.dir/src.cxx.o.d -o CMakeFiles/cmTC_8bb52.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-BgGFfa/src.cxx
-        Linking CXX executable cmTC_8bb52
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bb52.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8bb52.dir/src.cxx.o -o cmTC_8bb52
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_8cc40/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_8cc40.dir/build.make CMakeFiles/cmTC_8cc40.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z'
+        Building CXX object CMakeFiles/cmTC_8cc40.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety -std=c++17 -arch arm64 -fPIE   -Wthread-safety -MD -MT CMakeFiles/cmTC_8cc40.dir/src.cxx.o -MF CMakeFiles/cmTC_8cc40.dir/src.cxx.o.d -o CMakeFiles/cmTC_8cc40.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z/src.cxx
+        Linking CXX executable cmTC_8cc40
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cc40.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8cc40.dir/src.cxx.o -o cmTC_8cc40
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-ki5f8Z'
         
       exitCode: 0
   -
@@ -1443,13 +1501,15 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_33757/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_33757.dir/build.make CMakeFiles/cmTC_33757.dir/build
-        Building CXX object CMakeFiles/cmTC_33757.dir/thread_safety_attributes.cpp.o
-        /usr/bin/c++  -I/Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/include -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_33757.dir/thread_safety_attributes.cpp.o -MF CMakeFiles/cmTC_33757.dir/thread_safety_attributes.cpp.o.d -o CMakeFiles/cmTC_33757.dir/thread_safety_attributes.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/thread_safety_attributes.cpp
-        Linking CXX executable cmTC_33757
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33757.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_33757.dir/thread_safety_attributes.cpp.o -o cmTC_33757
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_1e687/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_1e687.dir/build.make CMakeFiles/cmTC_1e687.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_1e687.dir/thread_safety_attributes.cpp.o
+        /usr/bin/c++  -I/Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/include -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_1e687.dir/thread_safety_attributes.cpp.o -MF CMakeFiles/cmTC_1e687.dir/thread_safety_attributes.cpp.o.d -o CMakeFiles/cmTC_1e687.dir/thread_safety_attributes.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/thread_safety_attributes.cpp
+        Linking CXX executable cmTC_1e687
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e687.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1e687.dir/thread_safety_attributes.cpp.o -o cmTC_1e687
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
     runResult:
@@ -1468,8 +1528,8 @@ events:
     checks:
       - "Performing Test HAVE_CXX_FLAG_COVERAGE"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8i0Cct"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8i0Cct"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1483,15 +1543,17 @@ events:
       variable: "HAVE_CXX_FLAG_COVERAGE"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8i0Cct'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4a6d9/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4a6d9.dir/build.make CMakeFiles/cmTC_4a6d9.dir/build
-        Building CXX object CMakeFiles/cmTC_4a6d9.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_CXX_FLAG_COVERAGE  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  --coverage -std=c++17 -arch arm64 -fPIE   --coverage -MD -MT CMakeFiles/cmTC_4a6d9.dir/src.cxx.o -MF CMakeFiles/cmTC_4a6d9.dir/src.cxx.o.d -o CMakeFiles/cmTC_4a6d9.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-8i0Cct/src.cxx
-        Linking CXX executable cmTC_4a6d9
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a6d9.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  --coverage -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4a6d9.dir/src.cxx.o -o cmTC_4a6d9
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_4b642/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_4b642.dir/build.make CMakeFiles/cmTC_4b642.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz'
+        Building CXX object CMakeFiles/cmTC_4b642.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_COVERAGE  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  --coverage -std=c++17 -arch arm64 -fPIE   --coverage -MD -MT CMakeFiles/cmTC_4b642.dir/src.cxx.o -MF CMakeFiles/cmTC_4b642.dir/src.cxx.o.d -o CMakeFiles/cmTC_4b642.dir/src.cxx.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz/src.cxx
+        Linking CXX executable cmTC_4b642
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b642.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  --coverage -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4b642.dir/src.cxx.o -o cmTC_4b642
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-wnbVYz'
         
       exitCode: 0
   -
@@ -1517,13 +1579,15 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e6ad6/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e6ad6.dir/build.make CMakeFiles/cmTC_e6ad6.dir/build
-        Building CXX object CMakeFiles/cmTC_e6ad6.dir/std_regex.cpp.o
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_e6ad6.dir/std_regex.cpp.o -MF CMakeFiles/cmTC_e6ad6.dir/std_regex.cpp.o.d -o CMakeFiles/cmTC_e6ad6.dir/std_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/std_regex.cpp
-        Linking CXX executable cmTC_e6ad6
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6ad6.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e6ad6.dir/std_regex.cpp.o -o cmTC_e6ad6
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_140c5/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_140c5.dir/build.make CMakeFiles/cmTC_140c5.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_140c5.dir/std_regex.cpp.o
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_140c5.dir/std_regex.cpp.o -MF CMakeFiles/cmTC_140c5.dir/std_regex.cpp.o.d -o CMakeFiles/cmTC_140c5.dir/std_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/std_regex.cpp
+        Linking CXX executable cmTC_140c5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_140c5.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_140c5.dir/std_regex.cpp.o -o cmTC_140c5
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
     runResult:
@@ -1554,16 +1618,18 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b26e8/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b26e8.dir/build.make CMakeFiles/cmTC_b26e8.dir/build
-        Building CXX object CMakeFiles/cmTC_b26e8.dir/gnu_posix_regex.cpp.o
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_b26e8.dir/gnu_posix_regex.cpp.o -MF CMakeFiles/cmTC_b26e8.dir/gnu_posix_regex.cpp.o.d -o CMakeFiles/cmTC_b26e8.dir/gnu_posix_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/gnu_posix_regex.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_3c947/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3c947.dir/build.make CMakeFiles/cmTC_3c947.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3c947.dir/gnu_posix_regex.cpp.o
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_3c947.dir/gnu_posix_regex.cpp.o -MF CMakeFiles/cmTC_3c947.dir/gnu_posix_regex.cpp.o.d -o CMakeFiles/cmTC_3c947.dir/gnu_posix_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/gnu_posix_regex.cpp
         /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/gnu_posix_regex.cpp:1:10: fatal error: 'gnuregex.h' file not found
         #include <gnuregex.h>
                  ^~~~~~~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_b26e8.dir/gnu_posix_regex.cpp.o] Error 1
-        make: *** [cmTC_b26e8/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_3c947.dir/build.make:82: CMakeFiles/cmTC_3c947.dir/gnu_posix_regex.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_3c947/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1592,13 +1658,15 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a9240/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a9240.dir/build.make CMakeFiles/cmTC_a9240.dir/build
-        Building CXX object CMakeFiles/cmTC_a9240.dir/posix_regex.cpp.o
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_a9240.dir/posix_regex.cpp.o -MF CMakeFiles/cmTC_a9240.dir/posix_regex.cpp.o.d -o CMakeFiles/cmTC_a9240.dir/posix_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/posix_regex.cpp
-        Linking CXX executable cmTC_a9240
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9240.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a9240.dir/posix_regex.cpp.o -o cmTC_a9240
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_f49e8/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f49e8.dir/build.make CMakeFiles/cmTC_f49e8.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_f49e8.dir/posix_regex.cpp.o
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_f49e8.dir/posix_regex.cpp.o -MF CMakeFiles/cmTC_f49e8.dir/posix_regex.cpp.o.d -o CMakeFiles/cmTC_f49e8.dir/posix_regex.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/posix_regex.cpp
+        Linking CXX executable cmTC_f49e8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f49e8.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f49e8.dir/posix_regex.cpp.o -o cmTC_f49e8
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
     runResult:
@@ -1629,13 +1697,15 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_58507/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_58507.dir/build.make CMakeFiles/cmTC_58507.dir/build
-        Building CXX object CMakeFiles/cmTC_58507.dir/steady_clock.cpp.o
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_58507.dir/steady_clock.cpp.o -MF CMakeFiles/cmTC_58507.dir/steady_clock.cpp.o.d -o CMakeFiles/cmTC_58507.dir/steady_clock.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/steady_clock.cpp
-        Linking CXX executable cmTC_58507
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58507.dir/link.txt --verbose=1
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_58507.dir/steady_clock.cpp.o -o cmTC_58507
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_0841b/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0841b.dir/build.make CMakeFiles/cmTC_0841b.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0841b.dir/steady_clock.cpp.o
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_0841b.dir/steady_clock.cpp.o -MF CMakeFiles/cmTC_0841b.dir/steady_clock.cpp.o.d -o CMakeFiles/cmTC_0841b.dir/steady_clock.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/steady_clock.cpp
+        Linking CXX executable cmTC_0841b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0841b.dir/link.txt --verbose=1
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0841b.dir/steady_clock.cpp.o -o cmTC_0841b
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
     runResult:
@@ -1666,10 +1736,11 @@ events:
       stdout: |
         Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6fb0b/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6fb0b.dir/build.make CMakeFiles/cmTC_6fb0b.dir/build
-        Building CXX object CMakeFiles/cmTC_6fb0b.dir/pthread_affinity.cpp.o
-        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_6fb0b.dir/pthread_affinity.cpp.o -MF CMakeFiles/cmTC_6fb0b.dir/pthread_affinity.cpp.o.d -o CMakeFiles/cmTC_6fb0b.dir/pthread_affinity.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/pthread_affinity.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_f617f/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f617f.dir/build.make CMakeFiles/cmTC_f617f.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_f617f.dir/pthread_affinity.cpp.o
+        /usr/bin/c++   -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -Wstrict-aliasing  -Wthread-safety  -std=c++17 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_f617f.dir/pthread_affinity.cpp.o -MF CMakeFiles/cmTC_f617f.dir/pthread_affinity.cpp.o.d -o CMakeFiles/cmTC_f617f.dir/pthread_affinity.cpp.o -c /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/pthread_affinity.cpp
         /Users/tung_28/Desktop/Goss/internal/build/_deps/googlebenchmark-src/cmake/pthread_affinity.cpp:3:3: error: unknown type name 'cpu_set_t'
           cpu_set_t set;
           ^
@@ -1677,8 +1748,9 @@ events:
           for (int i = 0; i < CPU_SETSIZE; ++i) {
                               ^
         2 errors generated.
-        make[1]: *** [CMakeFiles/cmTC_6fb0b.dir/pthread_affinity.cpp.o] Error 1
-        make: *** [cmTC_6fb0b/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_f617f.dir/build.make:82: CMakeFiles/cmTC_f617f.dir/pthread_affinity.cpp.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_f617f/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1692,8 +1764,8 @@ events:
       - "perf_tests/CMakeLists.txt:20 (find_package)"
     description: "Detecting C OpenMP compiler info"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgzS1i"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgzS1i"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1707,18 +1779,20 @@ events:
       variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgzS1i'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a0520/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a0520.dir/build.make CMakeFiles/cmTC_a0520.dir/build
-        Building C object CMakeFiles/cmTC_a0520.dir/OpenMPTryFlag.c.o
-        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_a0520.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_a0520.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_a0520.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgzS1i/OpenMPTryFlag.c
-        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-YgzS1i/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_bee14/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_bee14.dir/build.make CMakeFiles/cmTC_bee14.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om'
+        Building C object CMakeFiles/cmTC_bee14.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_bee14.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_bee14.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_bee14.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om/OpenMPTryFlag.c
+        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
         #include <omp.h>
                  ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_a0520.dir/OpenMPTryFlag.c.o] Error 1
-        make: *** [cmTC_a0520/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_bee14.dir/build.make:82: CMakeFiles/cmTC_bee14.dir/OpenMPTryFlag.c.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-vxA3om'
+        gmake: *** [Makefile:134: cmTC_bee14/fast] Error 2
         
       exitCode: 2
   -
@@ -1729,8 +1803,8 @@ events:
       - "perf_tests/CMakeLists.txt:20 (find_package)"
     description: "Trying C OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib'"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-N54cE2"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-N54cE2"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1744,18 +1818,20 @@ events:
       variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-N54cE2'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_68798/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_68798.dir/build.make CMakeFiles/cmTC_68798.dir/build
-        Building C object CMakeFiles/cmTC_68798.dir/OpenMPTryFlag.c.o
-        /usr/bin/cc   -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_68798.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_68798.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_68798.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-N54cE2/OpenMPTryFlag.c
-        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-N54cE2/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_7133c/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_7133c.dir/build.make CMakeFiles/cmTC_7133c.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR'
+        Building C object CMakeFiles/cmTC_7133c.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_7133c.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_7133c.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_7133c.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR/OpenMPTryFlag.c
+        /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
         #include <omp.h>
                  ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_68798.dir/OpenMPTryFlag.c.o] Error 1
-        make: *** [cmTC_68798/fast] Error 2
+        gmake[1]: *** [CMakeFiles/cmTC_7133c.dir/build.make:82: CMakeFiles/cmTC_7133c.dir/OpenMPTryFlag.c.o] Error 1
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-xzhrLR'
+        gmake: *** [Makefile:134: cmTC_7133c/fast] Error 2
         
       exitCode: 2
   -
@@ -1766,8 +1842,8 @@ events:
       - "perf_tests/CMakeLists.txt:20 (find_package)"
     description: "Trying C OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib' and '/opt/homebrew/opt/libomp/include'"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0BAEKb"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0BAEKb"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1781,15 +1857,17 @@ events:
       variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0BAEKb'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a68b2/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a68b2.dir/build.make CMakeFiles/cmTC_a68b2.dir/build
-        Building C object CMakeFiles/cmTC_a68b2.dir/OpenMPTryFlag.c.o
-        /usr/bin/cc  -I/opt/homebrew/opt/libomp/include -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_a68b2.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_a68b2.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_a68b2.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-0BAEKb/OpenMPTryFlag.c
-        Linking C executable cmTC_a68b2
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a68b2.dir/link.txt --verbose=1
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a68b2.dir/OpenMPTryFlag.c.o -o cmTC_a68b2  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_a72d3/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_a72d3.dir/build.make CMakeFiles/cmTC_a72d3.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM'
+        Building C object CMakeFiles/cmTC_a72d3.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc  -I/opt/homebrew/opt/libomp/include -arch arm64 -fPIE   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_a72d3.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_a72d3.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_a72d3.dir/OpenMPTryFlag.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM/OpenMPTryFlag.c
+        Linking C executable cmTC_a72d3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a72d3.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a72d3.dir/OpenMPTryFlag.c.o -o cmTC_a72d3  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-DasmmM'
         
       exitCode: 0
   -
@@ -1800,8 +1878,8 @@ events:
       - "perf_tests/CMakeLists.txt:20 (find_package)"
     description: "Detecting C OpenMP version"
     directories:
-      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-aYsgYF"
-      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-aYsgYF"
+      source: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF"
+      binary: "/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1815,15 +1893,17 @@ events:
       variable: "OpenMP_SPECTEST_C_"
       cached: true
       stdout: |
-        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-aYsgYF'
+        Change Dir: '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_49f4d/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_49f4d.dir/build.make CMakeFiles/cmTC_49f4d.dir/build
-        Building C object CMakeFiles/cmTC_49f4d.dir/OpenMPCheckVersion.c.o
-        /usr/bin/cc  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_49f4d.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_49f4d.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_49f4d.dir/OpenMPCheckVersion.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-aYsgYF/OpenMPCheckVersion.c
-        Linking C executable cmTC_49f4d
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49f4d.dir/link.txt --verbose=1
-        /usr/bin/cc  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_49f4d.dir/OpenMPCheckVersion.c.o -o cmTC_49f4d
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_30394/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_30394.dir/build.make CMakeFiles/cmTC_30394.dir/build
+        gmake[1]: Entering directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF'
+        Building C object CMakeFiles/cmTC_30394.dir/OpenMPCheckVersion.c.o
+        /usr/bin/cc  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_30394.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_30394.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_30394.dir/OpenMPCheckVersion.c.o -c /Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF/OpenMPCheckVersion.c
+        Linking C executable cmTC_30394
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30394.dir/link.txt --verbose=1
+        /usr/bin/cc  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_30394.dir/OpenMPCheckVersion.c.o -o cmTC_30394
+        gmake[1]: Leaving directory '/Users/tung_28/Desktop/Goss/internal/build/CMakeFiles/CMakeScratch/TryCompile-yAUaaF'
         
       exitCode: 0
 ...
