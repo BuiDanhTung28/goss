@@ -1,4 +1,4 @@
-// #cgo darwin LDFLAGS: -L${SRCDIR}/internal/lib/darwin_arm64 -lfaiss_c -lfaiss -lstdc++ -lomp
+// #cgo darwin LDFLAGS: -L${SRCDIR}/internal/lib/darwin_arm64 -lfaiss_c -lfaiss -lstdc++ -lomp -framework Accelerate
 //
 //go:generate ./build.sh
 package faiss
