@@ -47,12 +47,13 @@ elif [[ "$OS" == "Darwin" ]]; then # macOS
   echo "==> Added Homebrew's libomp to CMAKE_PREFIX_PATH"
 else
   echo "Warning: Unsupported OS '$OS'. Build might fail. Windows requires manual setup of MSVC or MinGW toolchain."
-  # For now, we will proceed, but it's likely to fail without a proper toolchain.
 fi
 
 # --- Common build logic ---
 ROOT_DIR=$(cd "$(dirname "$0")" && pwd)
-FAISS_LIB_DIR="$ROOT_DIR/internal/lib"
+
+# Chỉnh lại thư mục lib cho macOS arm64 theo linker log
+FAISS_LIB_DIR="$ROOT_DIR/internal/lib/darwin_arm64"
 FAISS_STATIC_LIB="$FAISS_LIB_DIR/libfaiss.a"
 
 # Only build if the static library does not exist to save time
@@ -80,6 +81,6 @@ make -C "$FAISS_BUILD_DIR" -j faiss
 # Create lib directory if it doesn't exist
 mkdir -p "$FAISS_LIB_DIR"
 
-# Copy the static library to the final location
+# Copy the static library to the final location (đường dẫn đúng cho arm64)
 cp "$FAISS_BUILD_DIR/faiss/libfaiss.a" "$FAISS_STATIC_LIB"
-echo "==> Faiss static library built successfully." 
+echo "==> Faiss static library built successfully."
