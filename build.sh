@@ -76,5 +76,10 @@ cmake -S "$FAISS_SOURCE_DIR" -B "$FAISS_BUILD_DIR" \
 
 # Compile with Make
 make -C "$FAISS_BUILD_DIR" -j faiss
+
+# Create lib directory if it doesn't exist
+mkdir -p "$FAISS_LIB_DIR"
+
+# Copy the static library to the final location
 cp "$FAISS_BUILD_DIR/faiss/libfaiss.a" "$FAISS_STATIC_LIB"
 echo "==> Faiss static library built successfully." 
