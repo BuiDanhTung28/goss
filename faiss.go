@@ -25,7 +25,6 @@ var (
 	ErrNullPointer      = errors.New("null pointer")
 )
 
-// getLastError returns the last error from the Faiss C API
 func getLastError() error {
 	errMsg := C.faiss_get_last_error()
 	if errMsg == nil {
@@ -34,7 +33,6 @@ func getLastError() error {
 	return errors.New(C.GoString(errMsg))
 }
 
-// wrapError wraps a FAISS error with additional context
 func wrapError(err error, context string) error {
 	if err == nil {
 		return nil

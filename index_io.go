@@ -7,7 +7,7 @@ package faiss
 */
 import "C"
 import (
-	"fmt"
+	"errors"
 	"os"
 	"path/filepath"
 	"unsafe"
@@ -22,24 +22,24 @@ const (
 // WriteIndex writes an index to a file.
 func WriteIndex(idx Index, fname string) error {
 	if idx == nil {
-		return fmt.Errorf("index is nil")
+		return errors.New("index is nil")
 	}
 
 	if fname == "" {
-		return fmt.Errorf("filename is empty")
+		return errors.New("filename is empty")
 	}
 
 	// Create directory if it doesn't exist
 	dir := filepath.Dir(fname)
 	if err := os.MkdirAll(dir, 0755); err != nil {
-		return fmt.Errorf("could not create directory: %w", err)
+		return wrapError(err, "could not create directory")
 	}
 
 	cfname := C.CString(fname)
 	defer C.free(unsafe.Pointer(cfname))
 
 	if c := C.faiss_write_index_fname(idx.cPtr(), cfname); c != 0 {
-		return getLastError()
+		return wrapError(getLastError(), "write index operation")
 	}
 
 	return nil
@@ -47,12 +47,21 @@ func WriteIndex(idx Index, fname string) error {
 
 // ReadIndex reads an index from a file.
 func ReadIndex(fname string, ioflags int) (Index, error) {
+	if fname == "" {
+		return nil, errors.New("filename is empty")
+	}
+
+	// Check if file exists before calling FAISS API
+	if _, err := os.Stat(fname); os.IsNotExist(err) {
+		return nil, errors.New("index file does not exist")
+	}
+
 	cfname := C.CString(fname)
 	defer C.free(unsafe.Pointer(cfname))
 
 	var cIdx *C.FaissIndex
 	if c := C.faiss_read_index_fname(cfname, C.int(ioflags), &cIdx); c != 0 {
-		return nil, getLastError()
+		return nil, wrapError(getLastError(), "read index operation")
 	}
 	return NewFaissIndex(cIdx), nil
 }
