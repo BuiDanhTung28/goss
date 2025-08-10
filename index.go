@@ -16,7 +16,6 @@ import (
 )
 
 // Index is a Faiss index for vector similarity search.
-//
 // Note that some index implementations do not support all methods.
 // Check the Faiss wiki to see what operations an index supports.
 // https://github.com/facebookresearch/faiss/wiki
@@ -49,10 +48,6 @@ type Index interface {
 	// Returns the IDs of the k nearest neighbors for each query vector and the
 	// corresponding distances.
 	Search(x []float32, k int64) (distances []float32, labels []int64, err error)
-
-	// RangeSearch queries the index with the vectors in x.
-	// Returns all vectors with distance < radius.
-	RangeSearch(x []float32, radius float32) (*RangeSearchResult, error)
 
 	// Reset removes all vectors from the index.
 	Reset() error
@@ -218,46 +213,6 @@ func (idx *faissIndex) Search(x []float32, k int64) (
 	return
 }
 
-func (idx *faissIndex) RangeSearch(x []float32, radius float32) (
-	*RangeSearchResult, error,
-) {
-	if idx.idx == nil {
-		return nil, ErrNullPointer
-	}
-
-	d := idx.D()
-	if err := ValidateVectors(x, d); err != nil {
-		return nil, wrapError(err, "range_search vectors validation")
-	}
-
-	if err := ValidateRadius(radius); err != nil {
-		return nil, wrapError(err, "range_search radius validation")
-	}
-
-	if !idx.IsTrained() {
-		return nil, wrapError(ErrIndexNotTrained, "range_search operation")
-	}
-
-	n := len(x) / d
-	var rsr *C.FaissRangeSearchResult
-	if c := C.faiss_RangeSearchResult_new(&rsr, C.idx_t(n)); c != 0 {
-		return nil, wrapError(getLastError(), "range_search result creation")
-	}
-
-	if c := C.faiss_Index_range_search(
-		idx.idx,
-		C.idx_t(n),
-		(*C.float)(&x[0]),
-		C.float(radius),
-		rsr,
-	); c != 0 {
-		C.faiss_RangeSearchResult_free(rsr)
-		return nil, wrapError(getLastError(), "range_search operation")
-	}
-
-	return NewRangeSearchResult(rsr), nil
-}
-
 func (idx *faissIndex) Reset() error {
 	if idx.idx == nil {
 		return ErrNullPointer
@@ -291,74 +246,6 @@ func (idx *faissIndex) Delete() {
 		idx.idx = nil
 	}
 	runtime.SetFinalizer(idx, nil)
-}
-
-// RangeSearchResult is the result of a range search.
-type RangeSearchResult struct {
-	rsr *C.FaissRangeSearchResult
-}
-
-// NewRangeSearchResult creates a new range search result wrapper
-func NewRangeSearchResult(rsr *C.FaissRangeSearchResult) *RangeSearchResult {
-	result := &RangeSearchResult{rsr: rsr}
-	runtime.SetFinalizer(result, (*RangeSearchResult).Delete)
-	return result
-}
-
-// Nq returns the number of queries.
-func (r *RangeSearchResult) Nq() int {
-	if r.rsr == nil {
-		return 0
-	}
-	return int(C.faiss_RangeSearchResult_nq(r.rsr))
-}
-
-// Lims returns a slice containing start and end indices for queries in the
-// distances and labels slices returned by Labels.
-func (r *RangeSearchResult) Lims() []int {
-	if r.rsr == nil {
-		return nil
-	}
-
-	var lims *C.size_t
-	C.faiss_RangeSearchResult_lims(r.rsr, &lims)
-	length := r.Nq() + 1
-	return (*[1 << 30]int)(unsafe.Pointer(lims))[:length:length]
-}
-
-// Labels returns the unsorted IDs and respective distances for each query.
-// The result for query i is labels[lims[i]:lims[i+1]].
-func (r *RangeSearchResult) Labels() (labels []int64, distances []float32) {
-	if r.rsr == nil {
-		return nil, nil
-	}
-
-	lims := r.Lims()
-	if len(lims) == 0 {
-		return nil, nil
-	}
-
-	length := lims[len(lims)-1]
-	var clabels *C.idx_t
-	var cdist *C.float
-	C.faiss_RangeSearchResult_labels(r.rsr, &clabels, &cdist)
-
-	if clabels != nil {
-		labels = (*[1 << 30]int64)(unsafe.Pointer(clabels))[:length:length]
-	}
-	if cdist != nil {
-		distances = (*[1 << 30]float32)(unsafe.Pointer(cdist))[:length:length]
-	}
-	return
-}
-
-// Delete frees the memory associated with r.
-func (r *RangeSearchResult) Delete() {
-	if r.rsr != nil {
-		C.faiss_RangeSearchResult_free(r.rsr)
-		r.rsr = nil
-	}
-	runtime.SetFinalizer(r, nil)
 }
 
 // IndexFactory builds a composite index using the factory pattern.
