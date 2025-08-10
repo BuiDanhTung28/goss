@@ -73,6 +73,13 @@ const (
 	DefaultHNSWEfSearch = 16  // Default search parameter for HNSW
 )
 
+// Batch operation configurations
+const (
+	DefaultAddBatchSize = 1000  // Default batch size for adding vectors
+	MaxAddBatchSize     = 10000 // Maximum allowed batch size
+	MinAddBatchSize     = 1     // Minimum allowed batch size
+)
+
 // Utility functions
 
 // ValidateVectors validates that vectors have the correct dimensions
