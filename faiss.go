@@ -75,9 +75,12 @@ const (
 
 // Batch operation configurations
 const (
-	DefaultAddBatchSize = 1000  // Default batch size for adding vectors
-	MaxAddBatchSize     = 10000 // Maximum allowed batch size
-	MinAddBatchSize     = 1     // Minimum allowed batch size
+	DefaultAddBatchSize    = 1000  // Default batch size for adding vectors
+	DefaultSearchBatchSize = 100   // Default batch size for search queries
+	MaxAddBatchSize        = 10000 // Maximum allowed batch size for add
+	MaxSearchBatchSize     = 1000  // Maximum allowed batch size for search
+	MinAddBatchSize        = 1     // Minimum allowed batch size for add
+	MinSearchBatchSize     = 1     // Minimum allowed batch size for search
 )
 
 // Utility functions
