@@ -7,7 +7,9 @@ package faiss
 */
 import "C"
 import (
+	"errors"
 	"fmt"
+	"math"
 	"runtime"
 	"unsafe"
 )
@@ -86,7 +88,7 @@ func (idx *IndexFlat) Xb() []float32 {
 // This is safer than using Xb() as it creates a copy.
 func (idx *IndexFlat) GetVector(id int64) ([]float32, error) {
 	if idx.Index == nil {
-		return nil, fmt.Errorf("index is nil")
+		return nil, errors.New("index is nil")
 	}
 
 	if id < 0 || id >= idx.Ntotal() {
@@ -96,14 +98,14 @@ func (idx *IndexFlat) GetVector(id int64) ([]float32, error) {
 	d := idx.D()
 	vectors := idx.Xb()
 	if vectors == nil {
-		return nil, fmt.Errorf("no vectors in index")
+		return nil, errors.New("no vectors in index")
 	}
 
 	start := int(id) * d
 	end := start + d
 
 	if end > len(vectors) {
-		return nil, fmt.Errorf("vector access out of bounds")
+		return nil, errors.New("vector access out of bounds")
 	}
 
 	// Create a copy
@@ -115,11 +117,11 @@ func (idx *IndexFlat) GetVector(id int64) ([]float32, error) {
 // GetVectors returns copies of multiple vectors by their IDs.
 func (idx *IndexFlat) GetVectors(ids []int64) ([]float32, error) {
 	if idx.Index == nil {
-		return nil, fmt.Errorf("index is nil")
+		return nil, errors.New("index is nil")
 	}
 
 	if len(ids) == 0 {
-		return nil, fmt.Errorf("empty IDs slice")
+		return nil, errors.New("empty IDs slice")
 	}
 
 	d := idx.D()
@@ -134,7 +136,7 @@ func (idx *IndexFlat) GetVectors(ids []int64) ([]float32, error) {
 
 	vectors := idx.Xb()
 	if vectors == nil {
-		return nil, fmt.Errorf("no vectors in index")
+		return nil, errors.New("no vectors in index")
 	}
 
 	result := make([]float32, len(ids)*d)
@@ -155,7 +157,7 @@ func (idx *IndexFlat) GetVectors(ids []int64) ([]float32, error) {
 // GetVectorRange returns a copy of vectors in the specified range [start, end).
 func (idx *IndexFlat) GetVectorRange(start, end int64) ([]float32, error) {
 	if idx.Index == nil {
-		return nil, fmt.Errorf("index is nil")
+		return nil, errors.New("index is nil")
 	}
 
 	if start < 0 || end < 0 {
@@ -178,7 +180,7 @@ func (idx *IndexFlat) GetVectorRange(start, end int64) ([]float32, error) {
 	d := idx.D()
 	vectors := idx.Xb()
 	if vectors == nil {
-		return nil, fmt.Errorf("no vectors in index")
+		return nil, errors.New("no vectors in index")
 	}
 
 	count := int(end - start)
@@ -204,7 +206,7 @@ func (idx *IndexFlat) GetVectorRange(start, end int64) ([]float32, error) {
 // Returns distances in the same order as the vectors were added.
 func (idx *IndexFlat) ComputeDistances(query []float32) ([]float32, error) {
 	if idx.Index == nil {
-		return nil, fmt.Errorf("index is nil")
+		return nil, errors.New("index is nil")
 	}
 
 	d := idx.D()
@@ -214,7 +216,7 @@ func (idx *IndexFlat) ComputeDistances(query []float32) ([]float32, error) {
 
 	ntotal := idx.Ntotal()
 	if ntotal == 0 {
-		return nil, fmt.Errorf("index is empty")
+		return nil, errors.New("index is empty")
 	}
 
 	// Use search with k = ntotal to get all distances
@@ -226,9 +228,10 @@ func (idx *IndexFlat) ComputeDistances(query []float32) ([]float32, error) {
 	return distances, nil
 }
 
-// ComputeDistancesMatrix computes distances between multiple query vectors and all vectors in the index.
+// ComputeDistancesBatch computes distances between multiple query vectors and all vectors in the index
+// using SearchBatch for better memory management and performance.
 // Returns a matrix where result[i*ntotal+j] is the distance between query i and index vector j.
-func (idx *IndexFlat) ComputeDistancesMatrix(queries []float32) ([]float32, error) {
+func (idx *IndexFlat) ComputeDistancesBatch(queries []float32, batchSize int) ([]float32, error) {
 	if idx.Index == nil {
 		return nil, fmt.Errorf("index is nil")
 	}
@@ -243,13 +246,27 @@ func (idx *IndexFlat) ComputeDistancesMatrix(queries []float32) ([]float32, erro
 		return nil, fmt.Errorf("index is empty")
 	}
 
-	// Use search with k = ntotal to get all distances
-	distances, _, err := idx.Search(queries, ntotal)
-	if err != nil {
-		return nil, wrapError(err, "compute distances matrix")
+	if batchSize <= 0 {
+		batchSize = DefaultSearchBatchSize
 	}
 
-	return distances, nil
+	distances, _, err := idx.SearchBatch(queries, ntotal, batchSize)
+	if err != nil {
+		return nil, wrapError(err, "compute distances batch")
+	}
+
+	numQueries := len(queries) / d
+	result := make([]float32, numQueries*int(ntotal))
+
+	for i := 0; i < numQueries; i++ {
+		if i < len(distances) && i < len(distances[i]) {
+			start := i * int(ntotal)
+			end := start + int(ntotal)
+			copy(result[start:end], distances[i])
+		}
+	}
+
+	return result, nil
 }
 
 // ComputeL2Norms computes the L2 norms of all vectors in the index.
@@ -281,7 +298,7 @@ func (idx *IndexFlat) ComputeL2Norms() ([]float32, error) {
 			norm += vectors[j] * vectors[j]
 		}
 
-		norms[i] = float32(sqrt(float64(norm)))
+		norms[i] = float32(math.Sqrt(float64(norm)))
 	}
 
 	return norms, nil
@@ -291,40 +308,34 @@ func (idx *IndexFlat) ComputeL2Norms() ([]float32, error) {
 // This is useful for converting an L2 index to cosine similarity.
 func (idx *IndexFlat) NormalizeVectors() error {
 	if idx.Index == nil {
-		return fmt.Errorf("index is nil")
+		return errors.New("index is nil")
+	}
+
+	norms, err := idx.ComputeL2Norms()
+	if err != nil {
+		return wrapError(err, "get norms for normalization")
+	}
+
+	vectors := idx.Xb()
+	if vectors == nil {
+		return errors.New("no vectors in index")
 	}
 
 	d := idx.D()
 	ntotal := idx.Ntotal()
 
-	if ntotal == 0 {
-		return nil // Nothing to normalize
-	}
-
-	vectors := idx.Xb()
-	if vectors == nil {
-		return fmt.Errorf("no vectors in index")
-	}
-
 	for i := int64(0); i < ntotal; i++ {
+		if norms[i] == 0 {
+			continue
+		}
+
+		factor := float32(1.0) / norms[i]
 		start := int(i) * d
 		end := start + d
 
-		// Compute norm
-		var norm float32
-		for j := start; j < end; j++ {
-			norm += vectors[j] * vectors[j]
-		}
-
-		if norm == 0 {
-			continue // Skip zero vectors
-		}
-
-		norm = float32(1.0) / float32(sqrt(float64(norm)))
-
 		// Normalize
 		for j := start; j < end; j++ {
-			vectors[j] *= norm
+			vectors[j] *= factor
 		}
 	}
 
@@ -343,43 +354,9 @@ func (idx *IndexFlat) GetMemoryUsage() int64 {
 	// Each vector is d float32s, each float32 is 4 bytes
 	vectorsSize := ntotal * int64(d) * 4
 
-	// Add some overhead for index structures
-	overhead := int64(1024) // 1KB overhead estimate
+	overhead := int64(1024)
 
 	return vectorsSize + overhead
-}
-
-// GetIndexInfo returns comprehensive information about the flat index.
-func (idx *IndexFlat) GetIndexInfo() FlatIndexInfo {
-	info := FlatIndexInfo{
-		Type:        "IndexFlat",
-		Dimension:   0,
-		Count:       0,
-		IsTrained:   true, // Flat indices don't require training
-		Metric:      MetricL2,
-		MemoryUsage: 0,
-	}
-
-	if idx.Index == nil {
-		return info
-	}
-
-	info.Dimension = idx.D()
-	info.Count = idx.Ntotal()
-	info.Metric = idx.MetricType()
-	info.MemoryUsage = idx.GetMemoryUsage()
-
-	return info
-}
-
-// FlatIndexInfo contains information about a flat index.
-type FlatIndexInfo struct {
-	Type        string
-	Dimension   int
-	Count       int64
-	IsTrained   bool
-	Metric      int
-	MemoryUsage int64
 }
 
 // FlatIndexBuilder helps build flat indices with validation.
