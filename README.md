@@ -7,17 +7,27 @@ Go bindings for [Faiss](https://github.com/facebookresearch/faiss), a library fo
 
 This library bundles the Faiss C++ source code and provides an automated build process, allowing you to use Faiss in your Go projects with a simple `go get` and `go generate` flow, without needing to manually build or install the Faiss library.
 
-## Features
-
--   **Self-contained:** Bundles Faiss source code, no need for manual installation.
--   **Automated Build:** Uses `go generate` to automatically compile the required static library.
--   **Cross-Platform:** Provides build scripts and instructions for macOS and Linux.
--   **Memory Safe:** Uses Go finalizers to manage the lifecycle of C objects.
--   **Idiomatic Go API:** Provides a Go-friendly API on top of the Faiss C API.
-
 ## Installation
 
 This library requires a C++ compiler and build tools on your system to compile the bundled Faiss source code.
+
+### Using prebuilt library
+
+**For most users, you can simply install without building:**
+
+```bash
+go get github.com/BuiDanhTung28/goss
+```
+
+The library comes with prebuilt static libraries for common platforms:
+- **macOS**: ARM64 (Apple Silicon) and x64 (Intel)
+- **Linux**: x64 and ARM64
+
+**Note**: If you encounter linking errors, you may need to build from source (see below).
+
+### Building from source
+
+If you need to build from source or the prebuilt libraries don't work for your platform:
 
 ### 1. Install Dependencies
 
@@ -56,10 +66,10 @@ sudo yum groupinstall 'Development Tools' && sudo yum install cmake
 
 Once the dependencies are installed, you can get and build the module from within your project's directory.
 
-1.  **Get the module:**
-    *(Assuming your project is already a Go module. Replace with your actual repo path if needed.)*
+1.  **Clone the Goss repository:**
     ```sh
-    go get github.com/BuiDanhTung28/goss
+    git clone https://github.com/BuiDanhTung28/goss.git
+    cd goss
     ```
 
 2.  **Build the Faiss static library:**
@@ -69,75 +79,37 @@ Once the dependencies are installed, you can get and build the module from withi
     ```
     *(This may take a few minutes the first time you run it.)*
 
+3.  **In your project, use go get with replace:**
+    ```sh
+    # Get the module
+    go get github.com/BuiDanhTung28/goss
+    
+    # Add replace directive to use local version
+    go mod edit -replace github.com/BuiDanhTung28/goss=../goss
+    ```
+    
+    **Or manually add to go.mod:**
+    ```go
+    module yourproject
+    
+    go 1.21
+    
+    require github.com/BuiDanhTung28/goss v0.0.0
+    
+    replace github.com/BuiDanhTung28/goss => ../goss
+    ```
+
 That's it! The library is now ready to be used in your project.
 
-## Usage
-
-Here is a simple example of how to create an index, add vectors, and perform a search.
-
-```go
-package main
-
-import (
-	"fmt"
-	"log"
-
-	"goss/faiss" // Use your module name
-)
-
-func main() {
-	dimension := 8
-
-	// Create a Flat L2 index. 
-	// Note: NewIndexFlatL2 is not a real function yet. 
-	// You would use NewIndexFlat(dimension, faiss.MetricL2)
-	idx, err := faiss.NewIndexFlat(dimension, faiss.MetricL2)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer idx.Delete()
-
-	fmt.Printf("Index created. Is trained: %v, D: %d, Ntotal: %d\n", idx.IsTrained(), idx.D(), idx.Ntotal())
-
-	// Some vectors to add to the index
-	vectors := []float32{
-		1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
-		2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
-		3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
-	}
-
-	// Add vectors to the index
-	err = idx.Add(vectors)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Printf("After adding, Ntotal: %d\n", idx.Ntotal())
-
-	// A query vector
-	query := []float32{1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1}
-	k := int64(2) // Number of nearest neighbors to search for
-
-	// Search the index
-	distances, labels, err := idx.Search(query, k)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Printf("Search results for k=%d:\n", k)
-	for i := 0; i < int(k); i++ {
-		fmt.Printf("  - Rank %d: ID=%d, Distance=%.4f\n", i+1, labels[i], distances[i])
-	}
-}
+### Directory Structure
 ```
-
-## How It Works
-
-This library uses `cgo` to call the Faiss C API. To avoid forcing users to manually install the correct version of Faiss, we bundle the Faiss source code as a `git submodule`.
-
-When you run `go generate`, it executes a build script (`build.sh`) that:
-1.  Checks for the required system dependencies (`cmake`, `make`, etc.).
-2.  Compiles the bundled C++ source code into a static library (`libfaiss.a`).
-3.  Places the library inside an `internal` directory, which is ignored by Git.
-
-When you run `go build`, platform-specific build tags (`//go:build`) ensure that Go uses the correct CGO flags to link your program against the pre-compiled `libfaiss.a`. This results in a self-contained, static binary. 
+your-project/
+├── go.mod
+├── main.go
+└── goss/           # Cloned Goss repo
+    ├── internal/
+    │   └── lib/
+    │       ├── darwin_arm64/
+    │       └── linux_x64/
+    └── ...
+```
