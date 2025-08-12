@@ -1,14 +1,16 @@
 #!/bin/bash
-# build.sh - Cross-platform build script
+# build.sh - Cross-platform build script for macOS and Linux
 
 set -e
 
 OS="$(uname)"
 echo "==> Detected OS: $OS"
 
+# Check dependencies based on OS
 if [[ "$OS" == "Linux" ]]; then
   if ! (command -v cmake &> /dev/null && command -v make &> /dev/null && command -v g++ &> /dev/null); then
     echo "Error: cmake, make, g++ required."
+    echo "Install with: sudo apt-get install build-essential cmake"
     exit 1
   fi
 elif [[ "$OS" == "Darwin" ]]; then
@@ -22,27 +24,61 @@ elif [[ "$OS" == "Darwin" ]]; then
   fi
   if ! (brew ls --versions cmake &> /dev/null && brew ls --versions libomp &> /dev/null); then
     echo "Error: cmake and libomp required."
+    echo "Install with: brew install cmake libomp"
     exit 1
   fi
   export CMAKE_PREFIX_PATH=$(brew --prefix libomp):$CMAKE_PREFIX_PATH
   echo "Added libomp to CMAKE_PREFIX_PATH"
+else
+  echo "Unsupported operating system: $OS"
+  echo "Supported platforms: macOS, Linux"
+  exit 1
 fi
 
 ROOT_DIR=$(cd "$(dirname "$0")" && pwd)
-FAISS_LIB_DIR="$ROOT_DIR/internal/lib/darwin_arm64"
+FAISS_SOURCE_DIR="$ROOT_DIR/faiss_source"
+
+# Determine platform and architecture
+if [[ "$OS" == "Darwin" ]]; then
+    ARCH=$(uname -m)
+    if [[ "$ARCH" == "arm64" ]]; then
+        PLATFORM="darwin"
+        ARCH_NAME="darwin_arm64"
+        CMAKE_FLAGS="-DBLA_VENDOR=Apple"
+    else
+        PLATFORM="darwin"
+        ARCH_NAME="darwin_x64"
+        CMAKE_FLAGS="-DBLA_VENDOR=Apple"
+    fi
+elif [[ "$OS" == "Linux" ]]; then
+    ARCH=$(uname -m)
+    if [[ "$ARCH" == "x86_64" ]]; then
+        PLATFORM="linux"
+        ARCH_NAME="linux_x64"
+        CMAKE_FLAGS="-DBLA_VENDOR=OpenBLAS"
+    elif [[ "$ARCH" == "aarch64" ]]; then
+        PLATFORM="linux"
+        ARCH_NAME="linux_arm64"
+        CMAKE_FLAGS="-DBLA_VENDOR=OpenBLAS"
+    else
+        echo "Unsupported Linux architecture: $ARCH"
+        exit 1
+    fi
+fi
+
+FAISS_LIB_DIR="$ROOT_DIR/internal/lib/$ARCH_NAME"
 FAISS_STATIC_LIB="$FAISS_LIB_DIR/libfaiss.a"
 FAISS_C_STATIC_LIB="$FAISS_LIB_DIR/libfaiss_c.a"
 
-# Nếu cả hai thư viện đều đã tồn tại thì skip build
+# Check if libraries already exist
 if [ -f "$FAISS_STATIC_LIB" ] && [ -f "$FAISS_C_STATIC_LIB" ]; then
-  echo "Faiss static libraries already exist. Skipping build."
+  echo "FAISS static libraries for $PLATFORM ($ARCH_NAME) already exist. Skipping build."
   exit 0
 fi
 
-echo "Building Faiss static libraries with C API enabled..."
+echo "Building FAISS static libraries for $PLATFORM ($ARCH_NAME)..."
 
-FAISS_SOURCE_DIR="$ROOT_DIR/faiss_source"
-FAISS_BUILD_DIR="$ROOT_DIR/internal/build"
+FAISS_BUILD_DIR="$ROOT_DIR/internal/build/$ARCH_NAME"
 
 mkdir -p "$FAISS_BUILD_DIR"
 
@@ -53,7 +89,7 @@ cmake -S "$FAISS_SOURCE_DIR" -B "$FAISS_BUILD_DIR" \
     -DFAISS_ENABLE_C_API=ON \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-    -DBLA_VENDOR=Apple
+    $CMAKE_FLAGS
 
 # Build core library
 make -C "$FAISS_BUILD_DIR" -j faiss
@@ -66,4 +102,5 @@ mkdir -p "$FAISS_LIB_DIR"
 cp "$FAISS_BUILD_DIR/faiss/libfaiss.a" "$FAISS_STATIC_LIB"
 cp "$FAISS_BUILD_DIR/c_api/libfaiss_c.a" "$FAISS_C_STATIC_LIB"
 
-echo "Faiss static libraries built successfully."
+echo "FAISS static libraries for $PLATFORM ($ARCH_NAME) built successfully."
+echo "Libraries are available in: $FAISS_LIB_DIR"
