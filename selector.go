@@ -181,7 +181,6 @@ func CreateBatchSelector(ids []int64, maxID int64) (*IDSelector, error) {
 		return nil, fmt.Errorf("empty IDs slice")
 	}
 
-	// Remove duplicates and sort
 	cleanIDs := RemoveDuplicateIDs(ids)
 
 	// Validate
@@ -212,83 +211,6 @@ func CreateRangeSelector(start, end int64, maxID int64) (*IDSelector, error) {
 	}
 
 	return NewIDSelectorRange(start, end)
-}
-
-// SelectorStats provides statistics about a selector
-type SelectorStats struct {
-	Type        string
-	Count       int64
-	MinID       int64
-	MaxID       int64
-	HasNegative bool
-}
-
-// GetSelectorStats returns statistics about a batch selector
-// This only works for batch selectors created with known IDs
-func GetSelectorStats(ids []int64) SelectorStats {
-	stats := SelectorStats{
-		Type:        "batch",
-		Count:       int64(len(ids)),
-		MinID:       -1,
-		MaxID:       -1,
-		HasNegative: false,
-	}
-
-	if len(ids) == 0 {
-		return stats
-	}
-
-	stats.MinID = ids[0]
-	stats.MaxID = ids[0]
-
-	for _, id := range ids {
-		if id < 0 {
-			stats.HasNegative = true
-		}
-		if id < stats.MinID {
-			stats.MinID = id
-		}
-		if id > stats.MaxID {
-			stats.MaxID = id
-		}
-	}
-
-	return stats
-}
-
-// GetRangeStats returns statistics about a range selector
-func GetRangeStats(start, end int64) SelectorStats {
-	return SelectorStats{
-		Type:        "range",
-		Count:       end - start,
-		MinID:       start,
-		MaxID:       end - 1,
-		HasNegative: start < 0,
-	}
-}
-
-// EstimateRemovalImpact estimates the impact of removing IDs from an index
-func EstimateRemovalImpact(indexSize int64, idsToRemove []int64) (float32, error) {
-	if indexSize <= 0 {
-		return 0, fmt.Errorf("invalid index size: %d", indexSize)
-	}
-
-	if len(idsToRemove) == 0 {
-		return 0, nil
-	}
-
-	// Clean and validate IDs
-	cleanIDs := RemoveDuplicateIDs(idsToRemove)
-
-	// Count valid IDs (those within index bounds)
-	validCount := 0
-	for _, id := range cleanIDs {
-		if id >= 0 && id < indexSize {
-			validCount++
-		}
-	}
-
-	return float32(validCount) / float32(indexSize), nil
 }
 
 // BatchSelectorBuilder helps build complex batch selectors

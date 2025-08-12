@@ -49,6 +49,13 @@ type Index interface {
 	// corresponding distances.
 	Search(x []float32, k int64) (distances []float32, labels []int64, err error)
 
+	// SearchBatch queries the index with multiple vectors in batches
+	// Returns distances and labels for each query vector
+	SearchBatch(queries []float32, k int64, batchSize int) (distances [][]float32, labels [][]int64, err error)
+
+	// AddBatch adds vectors in batches for better memory management and performance
+	AddBatch(vectors []float32, batchSize int) error
+
 	// Reset removes all vectors from the index.
 	Reset() error
 
@@ -211,6 +218,115 @@ func (idx *faissIndex) Search(x []float32, k int64) (
 		return nil, nil, err
 	}
 	return
+}
+
+func (idx *faissIndex) SearchBatch(queries []float32, k int64, batchSize int) (distances [][]float32, labels [][]int64, err error) {
+	if idx.idx == nil {
+		return nil, nil, ErrNullPointer
+	}
+
+	if batchSize <= 0 {
+		batchSize = DefaultSearchBatchSize
+	}
+
+	d := idx.D()
+	if err := ValidateVectors(queries, d); err != nil {
+		return nil, nil, wrapError(err, "search batch queries validation")
+	}
+
+	if !idx.IsTrained() {
+		return nil, nil, wrapError(ErrIndexNotTrained, "search batch operation")
+	}
+
+	totalQueries := len(queries) / d
+	if totalQueries == 0 {
+		return make([][]float32, 0), make([][]int64, 0), nil
+	}
+
+	// Use optimal batch size if the provided one is too large
+	if batchSize > totalQueries {
+		batchSize = totalQueries
+	}
+
+	// Initialize result slices
+	distances = make([][]float32, totalQueries)
+	labels = make([][]int64, totalQueries)
+
+	// Process in batches
+	for i := 0; i < totalQueries; i += batchSize {
+		end := i + batchSize
+		if end > totalQueries {
+			end = totalQueries
+		}
+
+		batchStart := i * d
+		batchEnd := end * d
+		batch := queries[batchStart:batchEnd]
+
+		// Search this batch using existing Search method
+		batchDistances, batchLabels, err := idx.Search(batch, k)
+		if err != nil {
+			return nil, nil, wrapError(err, fmt.Sprintf("search batch %d-%d", i, end-1))
+		}
+
+		// Distribute results to final slices
+		for j := 0; j < end-i; j++ {
+			queryIdx := i + j
+			start := j * int(k)
+			end := start + int(k)
+
+			distances[queryIdx] = batchDistances[start:end]
+			labels[queryIdx] = batchLabels[start:end]
+		}
+	}
+
+	return distances, labels, nil
+}
+
+func (idx *faissIndex) AddBatch(vectors []float32, batchSize int) error {
+	if idx.idx == nil {
+		return ErrNullPointer
+	}
+
+	if batchSize <= 0 {
+		batchSize = DefaultAddBatchSize
+	}
+
+	d := idx.D()
+	if err := ValidateVectors(vectors, d); err != nil {
+		return wrapError(err, "add batch vectors validation")
+	}
+
+	if !idx.IsTrained() {
+		return wrapError(ErrIndexNotTrained, "add batch operation")
+	}
+
+	totalVectors := len(vectors) / d
+	if totalVectors == 0 {
+		return nil // Nothing to add
+	}
+
+	// Use optimal batch size if the provided one is too large
+	if batchSize > totalVectors {
+		batchSize = totalVectors
+	}
+
+	for i := 0; i < totalVectors; i += batchSize {
+		end := i + batchSize
+		if end > totalVectors {
+			end = totalVectors
+		}
+
+		batchStart := i * d
+		batchEnd := end * d
+		batch := vectors[batchStart:batchEnd]
+
+		if err := idx.Add(batch); err != nil {
+			return wrapError(err, fmt.Sprintf("add batch %d-%d", i, end-1))
+		}
+	}
+
+	return nil
 }
 
 func (idx *faissIndex) Reset() error {
