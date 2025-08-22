@@ -113,3 +113,153 @@ your-project/
     │       └── linux_x64/
     └── ...
 ```
+
+## 🔧 API Reference
+
+### Core Types
+
+#### Index Interface
+```go
+type Index interface {
+    D() int                    // Vector dimension
+    IsTrained() bool          // Whether index is trained
+    Ntotal() int64            // Number of indexed vectors
+    MetricType() int          // Distance metric type
+    Train(x []float32) error  // Train the index
+    Add(x []float32) error    // Add vectors
+    AddWithIDs(x []float32, xids []int64) error
+    Search(x []float32, k int64) ([]float32, []int64, error)
+    SearchBatch(queries []float32, k int64, batchSize int) ([][]float32, [][]int64, error)
+    AddBatch(vectors []float32, batchSize int) error
+    Reset() error             // Remove all vectors
+    RemoveIDs(sel *IDSelector) (int, error)
+    Delete()                  // Free memory
+}
+```
+
+#### Index Types
+```go
+// Flat Index - Exact search, stores all vectors
+type IndexFlat struct { Index }
+
+// IVF Index - Inverted file with clustering
+type IndexIVFFlat struct { Index }
+
+// HNSW Index - Hierarchical Navigable Small World
+type IndexHNSW struct { Index }
+```
+
+### Distance Metrics
+```go
+const (
+    MetricInnerProduct  = 0 // Inner product (cosine for normalized vectors)
+    MetricL2            = 1 // L2 (Euclidean) distance
+    MetricL1            = 2 // L1 (Manhattan) distance
+    MetricLinf          = 3 // L-infinity distance
+    MetricLp            = 4 // Lp distance
+    MetricCanberra      = 5 // Canberra distance
+    MetricBrayCurtis    = 6 // Bray-Curtis distance
+    MetricJensenShannon = 7 // Jensen-Shannon divergence
+)
+```
+
+### Factory Functions
+```go
+// Create index from description string
+func IndexFactory(d int, description string, metric int) (Index, error)
+
+// Create specific index types
+func NewIndexFlat(d int, metric int) (*IndexFlat, error)
+func NewIndexFlatIP(d int) (*IndexFlat, error)      // Inner product
+func NewIndexFlatL2(d int) (*IndexFlat, error)      // L2 distance
+func NewIndexFlatL1(d int) (*IndexFlat, error)      // L1 distance
+func NewIndexFlatLinf(d int) (*IndexFlat, error)    // L-infinity distance
+```
+
+## 📚 Usage Examples
+
+### 1. Basic Flat Index (Exact Search)
+```go
+// Create index
+index, err := faiss.NewIndexFlat(128, faiss.MetricL2)
+defer index.Delete()
+
+// Add vectors
+vectors := make([]float32, 128*1000)
+err = index.Add(vectors)
+
+// Search
+query := make([]float32, 128)
+distances, labels, err := index.Search(query, 5)
+```
+
+### 2. IVF Index with Clustering
+```go
+// Create IVF index with 100 clusters
+index, err := faiss.IndexFactory(128, "IVF100,Flat", faiss.MetricL2)
+defer index.Delete()
+
+// Train first, then add vectors
+err = index.Train(trainingVectors)
+err = index.Add(vectors)
+
+// Search
+distances, labels, err := index.Search(query, 10)
+```
+
+### 3. HNSW Index (Approximate Search)
+```go
+// Create HNSW index with 32 connections per node
+index, err := faiss.IndexFactory(128, "HNSW32", faiss.MetricL2)
+defer index.Delete()
+
+// No training needed for HNSW
+err = index.Add(vectors)
+
+// Search
+distances, labels, err := index.Search(query, 10)
+```
+
+### 4. Batch Operations
+```go
+// Add vectors in batches
+err = index.AddBatch(vectors, 1000)
+
+// Search multiple queries in batches
+distances, labels, err := index.SearchBatch(queries, 10, 100)
+```
+
+### 5. Custom IDs and Vector Management
+```go
+// Add vectors with custom IDs
+customIDs := make([]int64, numVectors)
+err = index.AddWithIDs(vectors, customIDs)
+
+// Remove specific vectors
+selector := faiss.NewIDSelectorRange(100, 200)
+removed, err := index.RemoveIDs(selector)
+```
+
+### 6. Index I/O Operations
+```go
+// Save index to file
+err = faiss.WriteIndex(index, "my_index.faiss")
+
+// Load index from file
+loadedIndex, err := faiss.ReadIndex("my_index.faiss")
+defer loadedIndex.Delete()
+```
+
+## 🎯 Index Type Recommendations
+
+- **Flat Index**: Small datasets (< 100K vectors), exact search needed
+- **IVF Index**: Large datasets (100K - 10M vectors), good accuracy needed
+- **HNSW Index**: Large datasets, very fast search needed, approximate search OK
+- **PQ Index**: Very large datasets (> 10M vectors), memory constrained
+
+## ⚡ Performance Tips
+
+1. **Choose the right index type** for your use case
+2. **Use batch operations** for large datasets
+3. **Train IVF indexes** with representative data
+4. **Use appropriate batch sizes** (100-1000 vectors per batch)
